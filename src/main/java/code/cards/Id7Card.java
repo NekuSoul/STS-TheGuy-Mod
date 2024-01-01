@@ -1,5 +1,12 @@
 package code.cards;
 
+import code.actions.Id7Action;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.unique.BladeFuryAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,12 +25,7 @@ public class Id7Card extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        while(!p.hand.isEmpty())
-            p.hand.moveToDiscardPile(p.hand.getRandomCard(false));
-
-        if(upgraded)
-            while (!p.drawPile.isEmpty())
-                p.drawPile.moveToDiscardPile(p.drawPile.getTopCard());
+        this.addToBot(new Id7Action(this.upgraded));
     }
 
     public void upp() {
@@ -33,3 +35,4 @@ public class Id7Card extends AbstractEasyCard {
         upgradeBaseCost(-1);
     }
 }
+
