@@ -23,11 +23,11 @@ public class ID_22 extends AbstractEasyCard {
         baseMagicNumber = magicNumber = 0;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-
+    public void use(AbstractPlayer p, AbstractMonster m){ }
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
     }
-
     @Override
     public void triggerOnManualDiscard()
     {
