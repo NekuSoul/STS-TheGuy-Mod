@@ -30,8 +30,8 @@ public class ID_5 extends AbstractEasyCard {
 
     public void upp() {
         upgradeDamage(3);
-        upgradeBlock(0);
-        upgradeMagicNumber(0);
-        upgradeBaseCost(0);
+        //upgradeBlock(0);
+        //upgradeMagicNumber(0);
+        //upgradeBaseCost(0);
     }
 }
