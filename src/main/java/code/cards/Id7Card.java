@@ -29,10 +29,6 @@ public class Id7Card extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeDamage(0);
-        upgradeBlock(0);
-        upgradeMagicNumber(0);
-        upgradeBaseCost(-1);
     }
 }
 
