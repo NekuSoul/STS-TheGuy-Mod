@@ -13,7 +13,7 @@ public class Id13Card extends AbstractEasyCard {
     public final static String ID = makeID("Id13Card");
 
     public Id13Card() {
-        super(ID, -1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         baseBlock = 4;
         baseMagicNumber = magicNumber = 0;
