@@ -3,6 +3,15 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${ModID}:Id7Card": {
+    "NAME": "Grand Cleanse",
+    "DESCRIPTION": "Discard your hand.",
+    "UPGRADE_DESCRIPTION": "Discard your hand and your deck."
+  },
+  "${ModID}:Id8Card": {
+    "NAME": "Daring Draw",
+    "DESCRIPTION": "Discard 3 cards. Draw !M! cards."
+  },
   "${ModID}:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
