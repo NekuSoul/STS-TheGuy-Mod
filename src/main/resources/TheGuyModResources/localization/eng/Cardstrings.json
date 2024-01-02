@@ -5,7 +5,7 @@
   },
   "${ModID}:Id7Card": {
     "NAME": "Grand Cleanse",
-    "DESCRIPTION": "{@@}Discard your {!Upgrades!|@=hand|>0=hand and your card}."
+    "DESCRIPTION": "{@@}Discard your {!Upgrades!|@=hand|>0=hand and your draw pile.}."
   },
   "${ModID}:Id8Card": {
     "NAME": "Daring Draw",
