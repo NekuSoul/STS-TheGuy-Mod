@@ -3,6 +3,18 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${ModID}:ID_4": {
+    "NAME": "Refined Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:ID_5": {
+    "NAME": "Careless Strike",
+    "DESCRIPTION": "Deal !D! damage. Discard 1 card. Draw 1 card."
+  },
+  "${ModID}:ID_6": {
+    "NAME": "Recoup",
+    "DESCRIPTION": "Add 1 Shiv to your hand for every card you discarded this turn."
+  },
   "${ModID}:ID_7": {
     "NAME": "Grand Cleanse",
     "DESCRIPTION": "{@@}Discard your {!Upgrades!|@=hand|>0=hand and your draw pile.}."
@@ -10,6 +22,82 @@
   "${ModID}:ID_8": {
     "NAME": "Daring Draw",
     "DESCRIPTION": "{@@}Discard 3 cards. Draw !M! card{!M!|>1=s}."
+  },
+  "${ModID}:ID_9": {
+    "NAME": "Prepare Ambush",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Mark."
+  },
+  "${ModID}:ID_10": {
+    "NAME": "Bare-knuckle Punch",
+    "DESCRIPTION": "Costs 1 less [E] for each card discarded this turn. Deal !D! damage."
+  },
+  "${ModID}:ID_11": {
+    "NAME": "Crowd Cutter",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for each enemy in combat."
+  },
+  "${ModID}:ID_12": {
+    "NAME": "Explore Options",
+    "DESCRIPTION": "Discard 1 Card. Draw !M! cards. Discard all cards drawn this way that do not share the discarded cards type."
+  },
+  "${ModID}:ID_13": {
+    "NAME": "Disengage",
+    "DESCRIPTION": "Deal !D! damage. Gain 4 !B!Block X times."
+  },
+  "${ModID}:ID_14": {
+    "NAME": "Stay Alert",
+    "DESCRIPTION": "Gain 4 !B! Block. Gain 4 !M! Block X times next turn.."
+  },
+  "${ModID}:ID_15": {
+    "NAME": "Discard up to 2 cards. Deal 5 !D! damage. Deal !M! for every discarded card.",
+    "DESCRIPTION": "{@@}"
+  },
+  "${ModID}:ID_16": {
+    "NAME": "Pre-planned",
+    "DESCRIPTION": "Discard 2 cards. Draw 1 extra card next turn."
+  },
+  "${ModID}:ID_17": {
+    "NAME": "Sneak up",
+    "DESCRIPTION": "Gain 1 Mark. Deal !D! for every Mark."
+  },
+  "${ModID}:ID_18": {
+    "NAME": "Collateral Damage",
+    "DESCRIPTION": "Whenever you gain Mark deal !D! to ALL enemies."
+  },
+  "${ModID}:ID_19": {
+    "NAME": "Quicken",
+    "DESCRIPTION": "Deal !D! damage. Draw X cards."
+  },
+  "${ModID}:ID_20": {
+    "NAME": "Grapple",
+    "DESCRIPTION": "{@@}Deal !D! damage. Gain 1 [E] next turn. {!Upgrades!|<1=Exhaust.}"
+  },
+  "${ModID}:ID_21": {
+    "NAME": "Caution",
+    "DESCRIPTION": "Gain !B! Block. Apply !M! Weak."
+  },
+  "${ModID}:ID_22": {
+    "NAME": "Lash out",
+    "DESCRIPTION": "Unplayable. When discarded deal !D! to ALL enemies."
+  },
+  "${ModID}:ID_23": {
+    "NAME": "Lightningclap",
+    "DESCRIPTION": "Apply !M! Vulnerable and deal !D! to ALL enemies."
+  },
+  "${ModID}:ID_24": {
+    "NAME": "Repurpose",
+    "DESCRIPTION": "Exhaust a Strike or Defend. Deal !D! damage."
+  },
+  "${ModID}:ID_25": {
+    "NAME": "Desperate Strike",
+    "DESCRIPTION": "Deal !D! damage. Discard a random card next turn."
+  },
+  "${ModID}:ID_26": {
+    "NAME": "Insurance",
+    "DESCRIPTION": "Whenever you draw or discard a card this turn gain !B! Block."
+  },
+  "${ModID}:ID_27": {
+    "NAME": "Caffeine",
+    "DESCRIPTION": "Whenever you have no cards in hand during your turn, draw a card."
   },
   "${ModID}:Defend": {
     "NAME": "Defend",
