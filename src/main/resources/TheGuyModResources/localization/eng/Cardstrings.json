@@ -48,8 +48,8 @@
     "DESCRIPTION": "Gain 4 !B! Block. Gain 4 !M! Block X times next turn.."
   },
   "${ModID}:ID_15": {
-    "NAME": "Discard up to 2 cards. Deal 5 !D! damage. Deal !M! for every discarded card.",
-    "DESCRIPTION": "{@@}"
+    "NAME": "Hissy Fit",
+    "DESCRIPTION": "Discard up to 2 cards. Deal 5 !D! damage. Deal !M! for every discarded card."
   },
   "${ModID}:ID_16": {
     "NAME": "Pre-planned",
