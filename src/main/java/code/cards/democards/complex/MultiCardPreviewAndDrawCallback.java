@@ -20,7 +20,7 @@ public class MultiCardPreviewAndDrawCallback extends AbstractEasyCard {
     // intellij stuff skill, self, uncommon, , , , , ,
 
     public MultiCardPreviewAndDrawCallback() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY); // This card is a 1 cost Uncommon Attack that targets ALL enemies.
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY); // This card is a 1 cost Uncommon Attack that targets ALL enemies.
         setDamage(10, +1);
         MultiCardPreview.add(this, new Smite(), new Safety()); // Display both Smite and Safety when you hover this card.
         isMultiDamage = true;

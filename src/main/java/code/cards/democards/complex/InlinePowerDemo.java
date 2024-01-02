@@ -18,7 +18,7 @@ public class InlinePowerDemo extends AbstractEasyCard {
     // intellij stuff power, self, uncommon
 
     public InlinePowerDemo() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         setMagic(4, +2);
     }
 

@@ -22,7 +22,7 @@ public class SelectCardsPlusCardMods extends AbstractEasyCard {
     // intellij stuff skill, self, uncommon
 
     public SelectCardsPlusCardMods() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         setUpgradedCost(0);
     }
 

@@ -15,7 +15,7 @@ public class EasyXCostDemo extends AbstractEasyCard {
     // intellij stuff attack, enemy, rare, , , , , 0, 1
 
     public EasyXCostDemo() {
-        super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         setDamage(5);
         setMagic(0, +1);
         setExhaust(true);
