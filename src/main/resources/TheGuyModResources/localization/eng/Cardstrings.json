@@ -41,15 +41,15 @@
   },
   "${ModID}:ID_13": {
     "NAME": "Disengage",
-    "DESCRIPTION": "Deal !D! damage. Gain 4 !B!Block X times."
+    "DESCRIPTION": "Deal !D! damage. Gain !B!Block X times."
   },
   "${ModID}:ID_14": {
     "NAME": "Stay Alert",
-    "DESCRIPTION": "Gain 4 !B! Block. Gain 4 !M! Block X times next turn.."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Block X times next turn.."
   },
   "${ModID}:ID_15": {
     "NAME": "Hissy Fit",
-    "DESCRIPTION": "Discard up to 2 cards. Deal 5 !D! damage. Deal !M! for every discarded card."
+    "DESCRIPTION": "Discard up to 2 cards. Deal !D! damage. Deal !M! for every discarded card."
   },
   "${ModID}:ID_16": {
     "NAME": "Pre-planned",
