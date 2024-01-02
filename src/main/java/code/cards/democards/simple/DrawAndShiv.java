@@ -14,7 +14,7 @@ public class DrawAndShiv extends AbstractEasyCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public DrawAndShiv() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF); // This card is a 1 cost Uncommon Skill that targets the Self.
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF); // This card is a 1 cost Uncommon Skill that targets the Self.
         cardsToPreview = new Shiv(); // Preview a Shiv when hovering over this card.
         setUpgradedCost(0); // Set the base cost to 0 when upgraded.
     }

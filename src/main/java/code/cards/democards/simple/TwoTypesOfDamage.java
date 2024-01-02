@@ -13,7 +13,7 @@ public class TwoTypesOfDamage extends AbstractEasyCard {
     // intellij stuff skill, self, uncommon, , , , , ,
 
     public TwoTypesOfDamage() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY); // This card is a 1 cost Common Attack that targets an Enemy.
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY); // This card is a 1 cost Common Attack that targets an Enemy.
         setDamage(8, +2);
         setSecondDamage(15, +5);
     }

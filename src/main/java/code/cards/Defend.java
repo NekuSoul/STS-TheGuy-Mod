@@ -10,7 +10,7 @@ public class Defend extends AbstractEasyCard {
     // intellij stuff skill, self, basic, , ,  5, 3, , 
 
     public Defend() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         setBlock(5, +3);
         tags.add(CardTags.STARTER_DEFEND);
     }

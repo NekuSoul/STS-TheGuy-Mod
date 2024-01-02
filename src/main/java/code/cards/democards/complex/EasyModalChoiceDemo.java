@@ -19,7 +19,7 @@ public class EasyModalChoiceDemo extends AbstractEasyCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public EasyModalChoiceDemo() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         setMagic(3, +1);
         setSecondMagic(1, +1);
     }
