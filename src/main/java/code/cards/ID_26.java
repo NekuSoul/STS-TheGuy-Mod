@@ -16,6 +16,7 @@ public class ID_26 extends AbstractEasyCard {
     public final static String ID = makeID("ID_26");
     // intellij stuff skill, self, Uncommen, 0, 0, 3, 5, 0, 0
 
+    private boolean justEvoked = true;
     public ID_26() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 0;
@@ -27,9 +28,18 @@ public class ID_26 extends AbstractEasyCard {
     {
         applyToSelf(new LambdaPower(makeID("ID_26_Power"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.DEBUFF, false, p, 0) {
 
+            @Override
+            public void onManualDiscard()
+            {
 
+            }
             public void onDrawOrDiscard()
             {
+                if(justEvoked)
+                {
+                    justEvoked = false;
+                    return;
+                }
                 this.flash();
                 this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
             }

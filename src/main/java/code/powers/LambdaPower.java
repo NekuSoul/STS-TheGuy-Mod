@@ -1,5 +1,6 @@
 package code.powers;
 
+import code.patches.subscribers.OnManualDiscardSubscriber;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 public abstract class LambdaPower extends AbstractEasyPower {
@@ -7,5 +8,6 @@ public abstract class LambdaPower extends AbstractEasyPower {
         super(ID, name, powerType, isTurnBased, owner, amount);
     }
 
+    public void onManualDiscard(){}
     public abstract void updateDescription();
 }

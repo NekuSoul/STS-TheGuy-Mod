@@ -1,5 +1,6 @@
 package code.powers;
 
+import code.patches.subscribers.OnManualDiscardSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import code.ModFile;
 import code.util.TexLoader;
 
-public abstract class AbstractEasyPower extends AbstractPower {
+public abstract class AbstractEasyPower extends AbstractPower implements OnManualDiscardSubscriber {
     public int amount2 = -1;
     public boolean isTwoAmount = false;
     public static Color redColor2 = Color.RED.cpy();
