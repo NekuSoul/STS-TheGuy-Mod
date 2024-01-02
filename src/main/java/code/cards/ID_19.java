@@ -3,9 +3,12 @@ package code.cards;
 import code.actions.EasyXCostAction;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static code.ModFile.makeID;
 import static code.util.Wiz.*;
@@ -28,6 +31,11 @@ public class ID_19 extends AbstractEasyCard {
 
     public boolean action(int amount, int[] params)
     {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasRelic("Chemical X")) {
+            amount += 2;
+            p.getRelic("Chemical X").flash();
+        }
         addToBot(new DrawCardAction(amount));
         return true;
     }
