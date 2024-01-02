@@ -3,11 +3,11 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
-  "${ModID}:Id7Card": {
+  "${ModID}:ID_7": {
     "NAME": "Grand Cleanse",
     "DESCRIPTION": "{@@}Discard your {!Upgrades!|@=hand|>0=hand and your draw pile.}."
   },
-  "${ModID}:Id8Card": {
+  "${ModID}:ID_8": {
     "NAME": "Daring Draw",
     "DESCRIPTION": "{@@}Discard 3 cards. Draw !M! card{!M!|>1=s}."
   },
