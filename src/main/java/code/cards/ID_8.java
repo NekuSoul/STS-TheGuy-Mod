@@ -1,20 +1,17 @@
 package code.cards;
 
-import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static code.ModFile.makeID;
-import static code.util.Wiz.*;
 
-public class Id8Card extends AbstractEasyCard {
-    public final static String ID = makeID("Id8Card");
+public class ID_8 extends AbstractEasyCard {
+    public final static String ID = makeID("ID_8");
     // intellij stuff SKILL, PLAYER, COMMON, 0, 0, 0, 0, 0, 0
 
-    public Id8Card() {
+    public ID_8() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
