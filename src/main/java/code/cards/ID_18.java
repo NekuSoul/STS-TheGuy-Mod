@@ -27,7 +27,7 @@ public class ID_18 extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(makeID("ID_18_Power"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_18_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             @Override
             public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source)
             {

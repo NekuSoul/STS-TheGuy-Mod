@@ -29,7 +29,7 @@ public class ID_25 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        applyToSelf(new LambdaPower(makeID("ID_25_Power"), cardStrings.EXTENDED_DESCRIPTION[0], AbstractPower.PowerType.DEBUFF, false, p, 1) {
+        applyToSelf(new LambdaPower(makeID("ID_25_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, 1) {
 
             @Override
             public void atStartOfTurnPostDraw()
