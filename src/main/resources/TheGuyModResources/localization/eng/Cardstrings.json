@@ -17,7 +17,7 @@
   },
   "${ModID}:ID_7": {
     "NAME": "Grand Cleanse",
-    "DESCRIPTION": "{@@}Discard your {!Upgrades!|@=hand|>0=hand and your draw pile.}."
+    "DESCRIPTION": "{@@}Discard your {!Upgrades!|@=hand|>0=hand and your draw pile}."
   },
   "${ModID}:ID_8": {
     "NAME": "Daring Draw",
