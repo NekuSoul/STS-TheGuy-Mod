@@ -27,13 +27,12 @@ public class ID_48Action extends AbstractGameAction {
     public static int numDiscarded;
     private static final float DURATION;
 
-    public  ID_48Action()
-    {
+    public ID_48Action() {
         this.duration = DURATION;
     }
+
     @Override
-    public void update()
-    {
+    public void update() {
         AbstractCard c;
         if (this.duration == DURATION) {
             if (p.hand.isEmpty()) {
@@ -47,7 +46,7 @@ public class ID_48Action extends AbstractGameAction {
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
-            while(var4.hasNext()) {
+            while (var4.hasNext()) {
                 c = (AbstractCard) var4.next();
                 this.p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
@@ -65,3 +64,4 @@ public class ID_48Action extends AbstractGameAction {
         TEXT = uiStrings.TEXT;
         DURATION = Settings.ACTION_DUR_XFAST;
     }
+}
