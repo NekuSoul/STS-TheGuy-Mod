@@ -2,10 +2,9 @@ package code.cards;
 
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,15 +22,22 @@ public class ID_41 extends AbstractEasyCard {
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 2;
+        exhaust = true;
     }
 
     @Override
-    public void triggerOnManualDiscard()
+    public void triggerWhenDrawn()
     {
         AbstractPlayer p = AbstractDungeon.player;
-        this.addToBot(new HealAction(p, p, this.magicNumber));
+
+        atb(new DrawCardAction(magicNumber));
+        this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+        this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1, false), 1));
     }
-    public void use(AbstractPlayer p, AbstractMonster m){}
+    public void use(AbstractPlayer p, AbstractMonster m)
+    {
+
+    }
 
     public void upp() {
         //upgradeDamage(0);

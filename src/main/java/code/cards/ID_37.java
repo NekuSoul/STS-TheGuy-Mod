@@ -1,7 +1,9 @@
 package code.cards;
 
 import code.cards.AbstractEasyCard;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static code.ModFile.makeID;
@@ -22,7 +24,8 @@ public class ID_37 extends AbstractEasyCard {
     @Override
     public void triggerOnManualDiscard()
     {
-
+        AbstractPlayer p = AbstractDungeon.player;
+        this.addToBot(new HealAction(p, p, this.magicNumber));
     }
     public void use(AbstractPlayer p, AbstractMonster m){}
 
