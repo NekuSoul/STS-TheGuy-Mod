@@ -27,10 +27,6 @@ public class ID_13 extends AbstractEasyCard {
     public boolean action(int amount, int[] params)
     {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasRelic("Chemical X")) {
-            amount += 2;
-            p.getRelic("Chemical X").flash();
-        }
         for (int i = 0; i < amount; i++)
             blck();
 

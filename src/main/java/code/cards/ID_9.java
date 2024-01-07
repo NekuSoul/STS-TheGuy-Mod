@@ -14,7 +14,7 @@ public class ID_9 extends AbstractEasyCard {
     // intellij stuff SKILL, PLAYER, COMMON, 0, 0, 4, 2, 1, 1
 
     public ID_9() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 0;
         baseBlock = 4;
         baseMagicNumber = magicNumber = 1;
