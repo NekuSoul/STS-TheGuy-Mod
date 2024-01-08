@@ -9,5 +9,6 @@ public abstract class LambdaPower extends AbstractEasyPower {
     }
 
     public void onManualDiscard(){}
+    public void onRefreshHand(){}
     public abstract void updateDescription();
 }

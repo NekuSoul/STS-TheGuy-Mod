@@ -23,7 +23,6 @@ public class ID_12 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         addToBot(new ID12_Action(p,p,magicNumber));
-        //addToBot((new DiscardAction()));
     }
 
     public void upp() {
