@@ -36,7 +36,7 @@ public class ID_27 extends AbstractEasyCard {
                 AbstractPlayer p = AbstractDungeon.player;
                 if (AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.actionManager.turnHasEnded && !AbstractDungeon.player.hasPower("No Draw") && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && (AbstractDungeon.player.discardPile.size() > 0 || AbstractDungeon.player.drawPile.size() > 0)) {
                     this.flash();
-                    this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    this.addToBot(new DrawCardAction(p, 1));
                 }
             }
 

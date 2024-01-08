@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.Arrays;
 
 @SuppressWarnings("unused")
 public class RefreshHandPatch {
 
-    @SpirePatch(clz = AbstractCard.class, method = "triggerOnRefreshHand")
+    @SpirePatch(clz = AbstractRelic.class, method = "onRefreshHand")
     public static class onRefreshHand {
 
         @SpirePostfixPatch
