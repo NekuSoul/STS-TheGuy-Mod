@@ -28,7 +28,7 @@ public class ID_45 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_45_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, 0) {
+        applyToSelf(new LambdaPower(makeID("ID_45_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, 1) {
 
             @Override
             public void atStartOfTurn()
@@ -45,18 +45,13 @@ public class ID_45 extends AbstractEasyCard {
                 int cnt = ap.amount;
                 if(magicNumber == 0)
                 {
-                    for (int i = 0; i < cnt; i++)
-                    {
-                        atb(new DrawCardAction(1));
-                        atb(new DiscardAction(p,p,1,true));
-                    }
+                    atb(new DrawCardAction(1));
+                    atb(new DiscardAction(p,p,1,true));
                 }
                 else
                 {
-                    for (int i = 0; i < cnt; i++) {
-                        atb(new DiscardAction(p, p, 1, true));
-                        atb(new DrawCardAction(1));
-                    }
+                    atb(new DiscardAction(p, p, 1, true));
+                    atb(new DrawCardAction(1));
                 }
 
             }

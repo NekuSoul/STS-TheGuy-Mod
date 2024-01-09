@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static code.ModFile.makeID;
 
 public class ID_51 extends AbstractEasyCard {
-    public final static String ID = makeID("ID_52");
+    public final static String ID = makeID("ID_51");
     // intellij stuff skill, self, uncommen, 0, 0, 0, 0, 3, 1
 
     public ID_51() {

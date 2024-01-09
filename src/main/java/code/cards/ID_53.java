@@ -11,7 +11,7 @@ import static code.ModFile.makeID;
 import static code.util.Wiz.*;
 
 public class ID_53 extends AbstractEasyCard {
-    public final static String ID = makeID("ID_45");
+    public final static String ID = makeID("ID_53");
     // intellij stuff power, self, rare, 0, 0, 0, 0, 0, 0
 
     public ID_53() {
@@ -23,11 +23,11 @@ public class ID_53 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_53_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_53_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, 0) {
 
             @Override
             public void atStartOfTurn() {
-                this.addToBot(new GainEnergyAction(this.amount));
+                this.addToBot(new GainEnergyAction(1));
                 this.flash();
             }
             @Override
@@ -47,9 +47,9 @@ public class ID_53 extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeDamage(0);
-        upgradeBlock(0);
-        upgradeMagicNumber(0);
-        upgradeBaseCost(1);
+        //upgradeDamage(0);
+        //upgradeBlock(0);
+        //upgradeMagicNumber(0);
+        upgradeBaseCost(0);
     }
 }
