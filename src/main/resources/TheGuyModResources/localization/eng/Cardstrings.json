@@ -41,7 +41,7 @@
   },
   "${ModID}:ID_13": {
     "NAME": "Disengage",
-    "DESCRIPTION": "Deal !D! damage. Gain !B!Block X times."
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block X times."
   },
   "${ModID}:ID_14": {
     "NAME": "Stay Alert",
@@ -85,7 +85,7 @@
   },
   "${ModID}:ID_24": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "Exhaust a Strike or Defend. Deal !D! damage."
+    "DESCRIPTION": "Exhaust a Strike from your hand. Deal !D! damage."
   },
   "${ModID}:ID_25": {
     "NAME": "Desperate Strike",
@@ -98,6 +98,94 @@
   "${ModID}:ID_27": {
     "NAME": "Caffeine",
     "DESCRIPTION": "Whenever you have no cards in hand during your turn, draw a card."
+  },
+  "${ModID}:ID_28": {
+    "NAME": "Banana Toss",
+    "DESCRIPTION": "Discard a card. Reduce ALL enemies strength by the cards cost times !M!."
+  },
+  "${ModID}:ID_30": {
+    "NAME": "Headstart",
+    "DESCRIPTION": "The first cost X card played this turn is free."
+  },
+  "${ModID}:ID_31": {
+    "NAME": "Raising Bars",
+    "DESCRIPTION": "The effect of cost X cards will always be at least !M!."
+  },
+  "${ModID}:ID_34": {
+    "NAME": "Front Flip",
+    "DESCRIPTION": "Gain 15 !B! Block. Draw 2 cards. Exhaust."
+  },
+  "${ModID}:ID_35": {
+    "NAME": "Reversal",
+    "DESCRIPTION": "Swap your draw pile with your discard pile."
+  },
+  "${ModID}:ID_36": {
+    "NAME": "Stay Sharp",
+    "DESCRIPTION": "Play the next X{!Upgrades!|>0=+1} cards that would be discarded. Exhaust."
+  },
+  "${ModID}:ID_37": {
+    "NAME": "Protective Hat",
+    "DESCRIPTION": "When this ard is discarded heal !M! and exhaust this card."
+  },
+  "${ModID}:ID_39": {
+    "NAME": "Countdown",
+    "DESCRIPTION": "After 10 cards are discarded deal !D! damage to ALL enemies."
+  },
+  "${ModID}:ID_40": {
+    "NAME": "Anger Form",
+    "DESCRIPTION": "When an attack with costs of X is played put an {!Upgrades!|>0=upgraded} copy that costs 0 into your discard pile."
+  },
+  "${ModID}:ID_41": {
+    "NAME": "Fundraiser",
+    "DESCRIPTION": "When this card is drawn exhaust it and draw !M! cards. Lose 1 [E] at the start of next turn."
+  },
+  "${ModID}:ID_42": {
+    "NAME": "Charged Punch",
+    "DESCRIPTION": "Deal !D! damage plus damage equal to the amount of cards in your discard pile."
+  },
+  "${ModID}:ID_43": {
+    "NAME": "Hook Punch",
+    "DESCRIPTION": "Deal !D! damage for every X card in your deck."
+  },
+  "${ModID}:ID_44": {
+    "NAME": "Arm sweep",
+    "DESCRIPTION": "Gain !B! Block. Apply !M! Weak."
+  },
+  "${ModID}:ID_45": {
+    "NAME": "Choo-Choo Mail",
+    "DESCRIPTION": "At the start of your turn {!Upgrades!|@=draw and discard a random card|>0=discard and draw a random card} for every Mark."
+  },
+  "${ModID}:ID_46": {
+    "NAME": "Night Watch",
+    "DESCRIPTION": "Gain !B! Block. When this card is discarded gain !M! [E] and exhaust this card."
+  },
+  "${ModID}:ID_47": {
+    "NAME": "Big Punch",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:ID_48": {
+    "NAME": "Spring Cleaning",
+    "DESCRIPTION": "Discard any number of cards."
+  },
+  "${ModID}:ID_49": {
+    "NAME": "Compost Heap",
+    "DESCRIPTION": "After a card has been discarded reduce its cost {!Upgrades!|@=by 1|>0=to 0} [E]."
+  },
+  "${ModID}:ID_50": {
+    "NAME": "Struggle",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain that much Block."
+  },
+  "${ModID}:ID_51": {
+    "NAME": "Opportunity",
+    "DESCRIPTION": "Retain. Draw !M! cards. Discard 3 cards, reduced by 1 for every turn this card has been retained."
+  },
+  "${ModID}:ID_52": {
+    "NAME": "Improve Potency",
+    "DESCRIPTION": "When you play the next cost X card, its effects are increased by !M!."
+  },
+  "${ModID}:ID_53": {
+    "NAME": "Hyperfocus",
+    "DESCRIPTION": "Gain 1 [E] at the start of your turn. Draw 1 card less per turn."
   },
   "${ModID}:Defend": {
     "NAME": "Defend",
