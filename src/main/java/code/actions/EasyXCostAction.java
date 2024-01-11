@@ -3,10 +3,14 @@ package code.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
+import java.util.Iterator;
 import java.util.function.BiFunction;
+
+import static code.ModFile.makeID;
 
 public class EasyXCostAction extends AbstractGameAction {
     public BiFunction<Integer, int[], Boolean> xActionUpdate;
@@ -41,6 +45,20 @@ public class EasyXCostAction extends AbstractGameAction {
                 effect += 2;
                 AbstractDungeon.player.getRelic(ChemicalX.ID).flash();
             }
+
+            Iterator<AbstractPower> var2 = AbstractDungeon.player.powers.iterator();
+            AbstractPower ap = null;
+            while(var2.hasNext())
+            {
+                ap = var2.next();
+                if (ap.ID.equals(makeID("ID_52_Power")))
+                {
+                    effect += ap.amount;
+                    AbstractDungeon.player.powers.remove(ap);
+                    break;
+                }
+            }
+
 
             isDone = xActionUpdate.apply(effect, params) || duration < 0.0f;
             firstUpdate = false;

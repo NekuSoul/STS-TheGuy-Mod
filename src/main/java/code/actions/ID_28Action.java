@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.NightmarePower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.Iterator;
 
@@ -38,7 +39,30 @@ public class ID_28Action extends AbstractGameAction {
             if (this.p.hand.isEmpty()) {
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
-                this.addToBot(new DrawCardAction(amount, new ID_12DrawFollowUpAction(this.p.hand.getBottomCard().type)));
+                AbstractCard tmpCard = p.hand.getBottomCard();
+
+                int cnt;
+                if(tmpCard.cost == -1)
+                    cnt = EnergyPanel.getCurrentEnergy();
+                else
+                    cnt = tmpCard.costForTurn;
+
+                Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+                AbstractMonster mo;
+                while(var3.hasNext()) {
+                    mo = (AbstractMonster)var3.next();
+                    this.addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -amount*cnt), -amount*cnt, true, AttackEffect.NONE));
+                }
+
+                var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+                while(var3.hasNext()) {
+                    mo = (AbstractMonster)var3.next();
+                    if (!mo.hasPower("Artifact")) {
+                        this.addToBot(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, amount*cnt), amount*cnt, true, AttackEffect.NONE));
+                    }
+                }
                 this.isDone = true;
             } else {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, true);
@@ -48,7 +72,11 @@ public class ID_28Action extends AbstractGameAction {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 AbstractCard tmpCard = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
 
-                int cnt = tmpCard.cost;
+                int cnt;
+                if(tmpCard.cost == -1)
+                    cnt = EnergyPanel.getCurrentEnergy();
+                else
+                    cnt = tmpCard.costForTurn;
 
                 Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
