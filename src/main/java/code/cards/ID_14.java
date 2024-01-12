@@ -31,10 +31,6 @@ public class ID_14 extends AbstractEasyCard {
     public boolean action(int amount, int[] params)
     {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasRelic("Chemical X")) {
-            amount += 2;
-            p.getRelic("Chemical X").flash();
-        }
         for (int a = 0; a < amount; a++)
         {
             this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, (this.block-magicNumber)), (this.block-magicNumber)));

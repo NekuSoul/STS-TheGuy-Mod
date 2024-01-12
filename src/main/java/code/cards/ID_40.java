@@ -35,19 +35,23 @@ public class ID_40 extends AbstractEasyCard {
         AbstractPlayer p = AbstractDungeon.player;
 
         magicNumber = amount;
-        applyToSelf(new LambdaPower(makeID("ID_40_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_40_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount) {
 
             @Override
             public void onPlayCard(AbstractCard card, AbstractMonster m)
             {
-                if(card.type != CardType.ATTACK) return;
-                AbstractCard newCard = card.makeCopy();
-                if(card.cost < 0)
-                    newCard.cost = 0;
-                if(magicNumber == 1)
-                    newCard.upgrade();
+                if (card.type != CardType.ATTACK) return;
 
-                this.addToBot(new MakeTempCardInDiscardAction(newCard, 1));
+                for (int i = 0; i < amount; i++)
+                {
+                    AbstractCard newCard = card.makeCopy();
+                    if (card.costForTurn >= 0)
+                        newCard.cost = 0;
+                    if (magicNumber == 1)
+                        newCard.upgrade();
+
+                    this.addToBot(new MakeTempCardInDiscardAction(newCard, 1));
+                }
             }
             @Override
             public void updateDescription() {

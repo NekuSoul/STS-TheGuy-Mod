@@ -21,9 +21,9 @@ public class ID_18 extends AbstractEasyCard {
 
     public ID_18() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseDamage = 3;
+        baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +34,7 @@ public class ID_18 extends AbstractEasyCard {
                 if(target != p) return;
                 if(power.ID != "PathToVictoryPower") return;
 
-                this.addToBot(new DamageAllEnemiesAction(p, damage , damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                this.addToBot(new DamageAllEnemiesAction(p, amount , DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             }
 
             @Override
@@ -45,9 +45,9 @@ public class ID_18 extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        //upgradeDamage(1);
         //upgradeBlock(0);
-        //upgradeMagicNumber(0);
+        upgradeMagicNumber(1);
         //upgradeBaseCost(0);
     }
 }

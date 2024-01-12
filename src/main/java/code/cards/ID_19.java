@@ -31,11 +31,6 @@ public class ID_19 extends AbstractEasyCard {
 
     public boolean action(int amount, int[] params)
     {
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasRelic("Chemical X")) {
-            amount += 2;
-            p.getRelic("Chemical X").flash();
-        }
         addToBot(new DrawCardAction(amount));
         return true;
     }
