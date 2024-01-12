@@ -45,6 +45,7 @@ public class ID_23 extends AbstractEasyCard {
             }
         }
 
+        this.calculateCardDamage(null);
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
