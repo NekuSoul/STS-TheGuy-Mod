@@ -66,6 +66,7 @@ public class CharacterFile extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(ID_4.ID);
         return retVal;
     }
 

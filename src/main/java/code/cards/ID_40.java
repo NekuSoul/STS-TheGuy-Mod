@@ -34,7 +34,6 @@ public class ID_40 extends AbstractEasyCard {
     {
         AbstractPlayer p = AbstractDungeon.player;
 
-        magicNumber = amount;
         applyToSelf(new LambdaPower(makeID("ID_40_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount) {
 
             @Override
@@ -52,6 +51,7 @@ public class ID_40 extends AbstractEasyCard {
 
                     this.addToBot(new MakeTempCardInDiscardAction(newCard, 1));
                 }
+                card.cost = 0;
             }
             @Override
             public void updateDescription() {
@@ -66,6 +66,6 @@ public class ID_40 extends AbstractEasyCard {
         //upgradeDamage(0);
         //upgradeBlock(0);
         upgradeMagicNumber(1);
-        upgradeBaseCost(-1);
+        //upgradeBaseCost(-1);
     }
 }
