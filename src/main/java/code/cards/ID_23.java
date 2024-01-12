@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,14 +27,16 @@ public class ID_23 extends AbstractEasyCard {
 
     public ID_23() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 3;
+        baseDamage = 4;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 1;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        this.addToBot(new SFXAction("THUNDERCLAP", 0.05F));
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
         AbstractMonster mo;
         while(var3.hasNext()) {
             mo = (AbstractMonster)var3.next();
@@ -41,20 +44,20 @@ public class ID_23 extends AbstractEasyCard {
                 this.addToBot(new VFXAction(new LightningEffect(mo.drawX, mo.drawY), 0.05F));
             }
         }
+
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
         while(var3.hasNext()) {
             mo = (AbstractMonster)var3.next();
-            this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, 1, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
         }
-
-        //atb(new WaitAction(0.5f));
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(3);
         //upgradeBlock(0);
-        upgradeMagicNumber(1);
-        upgradeBaseCost(1);
+        //upgradeMagicNumber(1);
+        //upgradeBaseCost(1);
     }
 }
