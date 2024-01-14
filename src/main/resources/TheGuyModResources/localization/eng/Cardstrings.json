@@ -4,8 +4,8 @@
     "DESCRIPTION": "Deal !D! damage."
   },
   "${ModID}:ID_4": {
-    "NAME": "Refined Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "One Punch",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable."
   },
   "${ModID}:ID_5": {
     "NAME": "Careless Strike",
@@ -45,7 +45,7 @@
   },
   "${ModID}:ID_14": {
     "NAME": "Stay Alert",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Block X times next turn.."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Block X times next turn."
   },
   "${ModID}:ID_15": {
     "NAME": "Hissy Fit",
@@ -69,7 +69,7 @@
   },
   "${ModID}:ID_20": {
     "NAME": "Grapple",
-    "DESCRIPTION": "{@@}Deal !D! damage. Gain 1 [E] next turn. {!Upgrades!|<1=Exhaust.}"
+    "DESCRIPTION": "{@@}Deal !D! damage. Gain !M! [E] next turn. Exhaust."
   },
   "${ModID}:ID_21": {
     "NAME": "Caution",
@@ -121,7 +121,7 @@
   },
   "${ModID}:ID_36": {
     "NAME": "Stay Sharp",
-    "DESCRIPTION": "Play the next X{!Upgrades!|>0=+1} cards that would be discarded. Exhaust."
+    "DESCRIPTION": "{@@}Play the next X{!Upgrades!|>0=+1} cards that would be discarded. Exhaust."
   },
   "${ModID}:ID_37": {
     "NAME": "Protective Hat",
@@ -133,7 +133,7 @@
   },
   "${ModID}:ID_40": {
     "NAME": "Anger Form",
-    "DESCRIPTION": "When an attack with costs of X is played put an {!Upgrades!|>0=upgraded} copy that costs 0 into your discard pile."
+    "DESCRIPTION": "{@@}When an attack with costs of X is played put an {!Upgrades!|>0=upgraded} copy that costs 0 into your discard pile."
   },
   "${ModID}:ID_41": {
     "NAME": "Fundraiser",
@@ -169,7 +169,7 @@
   },
   "${ModID}:ID_49": {
     "NAME": "Compost Heap",
-    "DESCRIPTION": "After a card has been discarded reduce its cost {!Upgrades!|@=by 1|>0=to 0} [E]."
+    "DESCRIPTION": "{@@}After a card has been discarded reduce its cost {!Upgrades!|@=by 1|>0=to 0} [E]."
   },
   "${ModID}:ID_50": {
     "NAME": "Struggle",
@@ -186,6 +186,94 @@
   "${ModID}:ID_53": {
     "NAME": "Hyperfocus",
     "DESCRIPTION": "Gain 1 [E] at the start of your turn. Draw 1 card less per turn."
+  },
+  "${ModID}:ID_54": {
+    "NAME": "Amp up",
+    "DESCRIPTION": "Deal !D! damage for each [E] spent on this card. This card costs 1 more this combat."
+  },
+  "${ModID}:ID_55": {
+    "NAME": "Punch Line",
+    "DESCRIPTION": "If a Punch card is in your draw pile, discard pile and exhaust pile !D! damage."
+  },
+  "${ModID}:ID_56": {
+    "NAME": "Retaining Punch",
+    "DESCRIPTION": "Retain. Deal !D! damage. Apply !M! Weak."
+  },
+  "${ModID}:ID_57": {
+    "NAME": "Exhausting Punch",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${ModID}:ID_58": {
+    "NAME": "X Punch",
+    "DESCRIPTION": "Deal !D! damage X times."
+  },
+  "${ModID}:ID_59": {
+    "NAME": "Fruit Punch",
+    "DESCRIPTION": "Gain 2 [E]. Heal !M! HP. Exhaust."
+  },
+  "${ModID}:ID_60": {
+    "NAME": "Power Punch",
+    "DESCRIPTION": "{@@}Punch cards cost 1 less. {!Upgrades!|>0=Draw 1 card.}"
+  },
+  "${ModID}:ID_61": {
+    "NAME": "Pose",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Retain. }Gain !M! Strength until end of turn."
+  },
+  "${ModID}:ID_62": {
+    "NAME": "Workout",
+    "DESCRIPTION": "Gain X Strength. Exhaust."
+  },
+  "${ModID}:ID_63": {
+    "NAME": "Cleanup",
+    "DESCRIPTION": "Gain !M! Dexterity for every card you discard this turn."
+  },
+  "${ModID}:ID_64": {
+    "NAME": "Take the Deal",
+    "DESCRIPTION": "Deal !D! damage. Add 1 Bargain into your hand."
+  },
+  "${ModID}:ID_65": {
+    "NAME": "Desperate Plea",
+    "DESCRIPTION": "Add !M! Bargain into your hand."
+  },
+  "${ModID}:ID_66": {
+    "NAME": "Smokescreen",
+    "DESCRIPTION": "Exhaust a card. Apply !M! Weak to ALL enemies."
+  },
+  "${ModID}:ID_67": {
+    "NAME": "Splatter",
+    "DESCRIPTION": "Deal !D! damage. If the enemy dies deal !M! damage to ALL enemies."
+  },
+  "${ModID}:ID_68": {
+    "NAME": "Rummaging",
+    "DESCRIPTION": "Gain 1 [E] for every 4 cards in your discard pile."
+  },
+  "${ModID}:ID_69": {
+    "NAME": "Kollekte",
+    "DESCRIPTION": "Deal !D! to ALL enemies. Add 1 Bargain into your hand for each enemy hit."
+  },
+  "${ModID}:ID_70": {
+    "NAME": "Rip off",
+    "DESCRIPTION": "When ever you play a Bargain ALL enemies lose !M! HP."
+  },
+  "${ModID}:ID_71": {
+    "NAME": "Sacrificial Pawn",
+    "DESCRIPTION": "{@@}{The next {!Upgrades!|@=card that gets discarded returns to your hand.|>0=two cards that get discarded return to your hand.}"
+  },
+  "${ModID}:ID_72": {
+    "NAME": "Second Hand",
+    "DESCRIPTION": "Play the top card of your discard pile."
+  },
+  "${ModID}:ID_73": {
+    "NAME": "Great Deal",
+    "DESCRIPTION": "Whenever a X card is played add 1 Bargain into your hand."
+  },
+  "${ModID}:ID_74": {
+    "NAME": "Last Ditch Effort",
+    "DESCRIPTION": "Gain 2*X Energy. Draw X cards. Gain X Fading. {!Upgrades!|@=Ethereal|>0=Retain}"
+  },
+  "${ModID}:ID_80": {
+    "NAME": "Bargain",
+    "DESCRIPTION": "Discard a card. Gain !M! [E]. Exhaust."
   },
   "${ModID}:Defend": {
     "NAME": "Defend",
