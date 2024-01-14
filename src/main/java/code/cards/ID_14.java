@@ -19,7 +19,7 @@ public class ID_14 extends AbstractEasyCard {
         super(ID, -1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 7;
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -33,7 +33,7 @@ public class ID_14 extends AbstractEasyCard {
         AbstractPlayer p = AbstractDungeon.player;
         for (int a = 0; a < amount; a++)
         {
-            this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, (this.block-magicNumber)), (this.block-magicNumber)));
+            this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, (magicNumber)), (magicNumber)));
         }
         return true;
     }
@@ -41,7 +41,7 @@ public class ID_14 extends AbstractEasyCard {
     public void upp() {
         //upgradeDamage(0);
         upgradeBlock(1);
-        upgradeMagicNumber(-2);
+        upgradeMagicNumber(2);
         //upgradeBaseCost(0);
     }
 }
