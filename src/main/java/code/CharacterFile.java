@@ -179,4 +179,10 @@ public class CharacterFile extends CustomPlayer {
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
+
+    public static class THEGUY_TAGS {
+        @SpireEnum(name = "Punch_THE_GUY") public static AbstractCard.CardTags
+                Punch_THE_GUY;
+
+    }
 }
