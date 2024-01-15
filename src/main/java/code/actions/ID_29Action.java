@@ -51,9 +51,11 @@ public class ID_29Action extends AbstractGameAction
             c.baseDraw *= multiplier;
             c.baseHeal *= multiplier;
             c.baseMagicNumber *= multiplier;
-            c.cost *= multiplier;
-            c.costForTurn = c.cost;
-            c.isCostModified = true;
+            if(c.cost > 0) {
+                c.cost *= multiplier;
+                c.costForTurn = c.cost;
+                c.isCostModified = true;
+            }
             for (int i = 0; i < multiplier; i+=2) {
                 c.name = "Double " + c.name;
             }

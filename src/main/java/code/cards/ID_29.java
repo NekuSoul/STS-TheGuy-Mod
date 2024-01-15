@@ -13,7 +13,7 @@ public class ID_29 extends AbstractEasyCard {
     // intellij stuff skill, self, rare, 0, 0, 0, 0, 2, 2
 
     public ID_29() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 2;
@@ -28,6 +28,6 @@ public class ID_29 extends AbstractEasyCard {
         upgradeDamage(0);
         upgradeBlock(0);
         upgradeMagicNumber(2);
-        upgradeBaseCost(2);
+        upgradeBaseCost(4);
     }
 }
