@@ -59,6 +59,23 @@ public class EasyXCostAction extends AbstractGameAction {
                 }
             }
 
+            if(AbstractDungeon.player.hasPower(makeID("ID_31_Power")))
+            {
+                var2 = AbstractDungeon.player.powers.iterator();
+                int temp = 0;
+                while(var2.hasNext())
+                {
+                    ap = var2.next();
+                    if (ap.ID.equals(makeID("ID_31_Power")))
+                    {
+                        temp = ap.amount;
+                        if(effect < temp)
+                            effect = temp;
+                        break;
+                    }
+                }
+            }
+
 
             isDone = xActionUpdate.apply(effect, params) || duration < 0.0f;
             firstUpdate = false;
