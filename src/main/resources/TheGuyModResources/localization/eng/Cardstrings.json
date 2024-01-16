@@ -103,6 +103,10 @@
     "NAME": "Banana Toss",
     "DESCRIPTION": "Discard a card. Reduce ALL enemies strength by the cards cost times !M!."
   },
+  "${ModID}:ID_29": {
+    "NAME": "Double",
+    "DESCRIPTION": "Select a card. Double every stat of the card."
+  },
   "${ModID}:ID_30": {
     "NAME": "Headstart",
     "DESCRIPTION": "The first cost X card played this turn is free."
