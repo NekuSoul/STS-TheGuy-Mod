@@ -8,7 +8,7 @@
     "DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable."
   },
   "${ModID}:ID_5": {
-    "NAME": "Careless Strike",
+    "NAME": "Careless Punch",
     "DESCRIPTION": "Deal !D! damage. Discard 1 card. Draw 1 card."
   },
   "${ModID}:ID_6": {
