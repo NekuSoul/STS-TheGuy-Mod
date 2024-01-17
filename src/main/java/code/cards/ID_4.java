@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.CharacterFile;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,6 +20,7 @@ public class ID_4 extends AbstractEasyCard {
         baseDamage = 7;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 2;
+        this.tags.add(CharacterFile.THEGUY_TAGS.Punch_THE_GUY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
