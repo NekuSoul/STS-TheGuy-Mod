@@ -46,6 +46,9 @@ public class ID_28Action extends AbstractGameAction {
                     cnt = EnergyPanel.getCurrentEnergy();
                 else
                     cnt = tmpCard.costForTurn;
+                p.hand.moveToDiscardPile(tmpCard);
+                tmpCard.triggerOnManualDiscard();
+
 
                 Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
@@ -70,6 +73,10 @@ public class ID_28Action extends AbstractGameAction {
             }
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+                if(AbstractDungeon.handCardSelectScreen.selectedCards.isEmpty()) {
+                    isDone = true;
+                    return;
+                }
                 AbstractCard tmpCard = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
 
                 int cnt;
@@ -77,6 +84,8 @@ public class ID_28Action extends AbstractGameAction {
                     cnt = EnergyPanel.getCurrentEnergy();
                 else
                     cnt = tmpCard.costForTurn;
+                p.hand.moveToDiscardPile(tmpCard);
+                tmpCard.triggerOnManualDiscard();
 
                 Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
