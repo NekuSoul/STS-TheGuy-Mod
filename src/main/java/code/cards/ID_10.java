@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.CharacterFile;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -18,6 +19,7 @@ public class ID_10 extends AbstractEasyCard {
         baseDamage = 7;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
+        this.tags.add(CharacterFile.THEGUY_TAGS.Punch_THE_GUY);
     }
 
     public void didDiscard() {

@@ -17,6 +17,7 @@ public class ID_29 extends AbstractEasyCard {
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 2;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
