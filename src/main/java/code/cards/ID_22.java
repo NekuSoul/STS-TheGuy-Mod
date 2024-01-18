@@ -1,13 +1,17 @@
 package code.cards;
 
+import code.actions.ID_22Action;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.commons.lang3.ObjectUtils;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 import static code.ModFile.makeID;
 import static code.util.Wiz.*;
@@ -23,6 +27,16 @@ public class ID_22 extends AbstractEasyCard {
         baseMagicNumber = magicNumber = 0;
     }
 
+
+    public void didDiscard() {
+        AbstractPlayer p = AbstractDungeon.player;
+        if(p.discardPile.contains(this) && p.discardPile.getTopCard() != this)
+        {
+            att(new ID_22Action(this));
+        }
+
+
+    }
     public void use(AbstractPlayer p, AbstractMonster m){ }
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
