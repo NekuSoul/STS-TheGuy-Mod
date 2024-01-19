@@ -24,6 +24,7 @@ public class ID_25 extends AbstractEasyCard {
         baseDamage = 12;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
+        tags.add(CardTags.STRIKE);
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
