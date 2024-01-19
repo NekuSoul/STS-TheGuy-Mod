@@ -33,10 +33,12 @@ public class ID_71 extends AbstractEasyCard {
             @Override
             public void onManualDiscard(){
 
-                AbstractCard card = p.discardPile.getTopCard();
-                p.discardPile.removeCard(card);
-                p.discardPile.moveToHand(card);
-                amount--;
+                if(amount > 0) {
+                    amount--;
+                    AbstractCard card = p.discardPile.getTopCard();
+                    p.discardPile.removeCard(card);
+                    p.discardPile.moveToHand(card);
+                }
                 if(amount == 0)
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_71_Power")));
             }

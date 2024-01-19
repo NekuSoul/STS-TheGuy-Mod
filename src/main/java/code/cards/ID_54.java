@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.actions.ID_54Action;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -25,7 +26,7 @@ public class ID_54 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage*this.cost, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.modifyCostForCombat(1);
+        atb(new ID_54Action(this,1));
     }
 
 

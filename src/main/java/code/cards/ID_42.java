@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.CharacterFile;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,22 +19,43 @@ public class ID_42 extends AbstractEasyCard {
         baseDamage = 3;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
+        this.tags.add(CharacterFile.THEGUY_TAGS.Punch_THE_GUY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        int i = AbstractDungeon.player.discardPile.size();
-        if( this.upgraded)
-            baseDamage = 3 + i;
-        else
-            baseDamage = 5 + i;
         dmg(m, AbstractGameAction.AttackEffect.NONE);
+
+        if (!this.upgraded) {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        } else {
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        }
+
+        this.initializeDescription();
+    }
+
+    public void applyPowers() {
+        this.baseDamage = AbstractDungeon.player.discardPile.size();
+        if (this.upgraded) {
+            this.baseDamage += 3;
+        }
+
+        super.applyPowers();
+        if (!this.upgraded) {
+            this.rawDescription = "cardStrings.DESCRIPTION";
+        } else {
+            this.rawDescription = "cardStrings.UPGRADE_DESCRIPTION";
+        }
+
+        this.rawDescription = this.rawDescription + "cardStrings.EXTENDED_DESCRIPTION[0]";
+        this.initializeDescription();
     }
 
     public void upp() {
-        upgradeDamage(2);
+        //upgradeDamage(0);
         //upgradeBlock(0);
         //upgradeMagicNumber(0);
-        upgradeBaseCost(1);
+        //upgradeBaseCost(1);
     }
 }

@@ -22,7 +22,7 @@ public class ID_66 extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

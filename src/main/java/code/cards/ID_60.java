@@ -1,6 +1,7 @@
 package code.cards;
 
 import code.CharacterFile;
+import code.actions.ID_60Action;
 import code.cards.AbstractEasyCard;
 import code.powers.LambdaPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -30,36 +31,7 @@ public class ID_60 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        Iterator cards = p.hand.group.iterator();
-        while(cards.hasNext())
-        {
-            AbstractCard card = (AbstractCard) cards.next();
-            if(card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY) && card.cost >0)
-            {
-                card.cost -= 1;
-                card.isCostModified = true;
-            }
-        }
-        cards = p.discardPile.group.iterator();
-        while(cards.hasNext())
-        {
-            AbstractCard card = (AbstractCard) cards.next();
-            if(card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY) && card.cost >0)
-            {
-                card.cost -= 1;
-                card.isCostModified = true;
-            }
-        }
-        cards = p.drawPile.group.iterator();
-        while(cards.hasNext())
-        {
-            AbstractCard card = (AbstractCard) cards.next();
-            if(card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY) && card.cost >0)
-            {
-                card.cost -= 1;
-                card.isCostModified = true;
-            }
-        }
+        atb(new ID_60Action());
 
         if(!upgraded) return;
         applyToSelf(new LambdaPower(makeID("ID_60_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, magicNumber) {

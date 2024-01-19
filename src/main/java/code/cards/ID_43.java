@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.CharacterFile;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -23,6 +24,7 @@ public class ID_43 extends AbstractEasyCard {
         baseDamage = 7;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
+        this.tags.add(CharacterFile.THEGUY_TAGS.Punch_THE_GUY);
     }
 
     public static int countCards() {

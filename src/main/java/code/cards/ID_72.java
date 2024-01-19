@@ -13,15 +13,16 @@ public class ID_72 extends AbstractEasyCard {
     // intellij stuff skill, enemy, rare, 0, 0, 0, 0, 0, 0
 
     public ID_72() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        atb(new ID_72Action(m,false));
+        atb(new ID_72Action(m,true));
     }
 
     public void upp() {

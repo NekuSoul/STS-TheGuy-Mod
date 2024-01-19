@@ -2,6 +2,8 @@ package code.cards;
 
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,7 +25,9 @@ public class ID_6 extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        makeInHand(new Shiv(),GameActionManager.totalDiscardedThisTurn);
+        AbstractCard onUseSneakup = new ID_17();
+        onUseSneakup.exhaust = true;
+        atb(new MakeTempCardInHandAction(onUseSneakup, GameActionManager.totalDiscardedThisTurn));
     }
 
     public void upp() {

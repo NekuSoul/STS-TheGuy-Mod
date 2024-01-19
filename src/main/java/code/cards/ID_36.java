@@ -1,6 +1,7 @@
 package code.cards;
 
 import code.actions.EasyXCostAction;
+import code.actions.ID_72Action;
 import code.cards.AbstractEasyCard;
 import code.powers.LambdaPower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -43,10 +44,12 @@ public class ID_36 extends AbstractEasyCard {
             @Override
             public void onManualDiscard()
             {
-                AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
-                AbstractCard card = p.discardPile.getTopCard();
-                this.addToTop(new NewQueueCardAction(card, target, false, true));
-                amount--;
+                if(amount > 0)
+                {
+                    amount--;
+                    AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
+                    atb(new ID_72Action(target,false));
+                }
                 if(amount == 0)
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_36_Power")));
             }
