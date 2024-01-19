@@ -24,7 +24,7 @@ public class ID_72 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
-        atb(new ID_72Action(m,false));
+        atb(new ID_72Action(m,true));
     }
 
     public void upp() {
