@@ -22,7 +22,7 @@ public class ID_72 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        atb(new ID_72Action(m,true));
+        atb(new ID_72Action(m,false));
     }
 
     public void upp() {
