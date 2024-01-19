@@ -20,6 +20,7 @@ public class ID_22Action extends AbstractGameAction {
             AbstractPlayer p = AbstractDungeon.player;
             p.hand.addToHand(c);
             p.discardPile.removeCard(c);
+            isDone = true;
         }
 
         this.tickDuration();

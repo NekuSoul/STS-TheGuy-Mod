@@ -20,19 +20,22 @@ public class ID_22 extends AbstractEasyCard {
     public final static String ID = makeID("ID_22");
     // intellij stuff ATTACK, NONE, Common, 2, 3, 0, 0, 0, 0
 
+    AbstractGameAction action;
     public ID_22() {
         super(ID, -2, CardType.ATTACK, CardRarity.COMMON, CardTarget.NONE);
         baseDamage = 2;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
+
+        this.action = new ID_22Action(this);
     }
 
 
     public void didDiscard() {
         AbstractPlayer p = AbstractDungeon.player;
-        if(p.discardPile.contains(this) && p.discardPile.getTopCard() != this)
+        if(p.discardPile.contains(this) && p.discardPile.getTopCard() != this && !AbstractDungeon.actionManager.actions.contains(action))
         {
-            att(new ID_22Action(this));
+            att(this.action);
         }
 
 

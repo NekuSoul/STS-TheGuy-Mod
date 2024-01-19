@@ -4,6 +4,7 @@ import code.CharacterFile;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,9 +17,9 @@ public class ID_10 extends AbstractEasyCard {
 
     public ID_10() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 9;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 1;
         this.tags.add(CharacterFile.THEGUY_TAGS.Punch_THE_GUY);
     }
 
@@ -38,10 +39,11 @@ public class ID_10 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(3);
         //upgradeBlock(0);
         //upgradeMagicNumber(0);
         //upgradeBaseCost(0);
