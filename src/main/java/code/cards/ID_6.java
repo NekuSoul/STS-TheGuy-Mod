@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.actions.ID_6Action;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -20,14 +21,13 @@ public class ID_6 extends AbstractEasyCard {
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
-        cardsToPreview = new Shiv();
+        cardsToPreview = new ID_17();
+        cardsToPreview.purgeOnUse = true;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractCard onUseSneakup = new ID_17();
-        onUseSneakup.exhaust = true;
-        atb(new MakeTempCardInHandAction(onUseSneakup, GameActionManager.totalDiscardedThisTurn));
+        atb(new ID_6Action(cardsToPreview, GameActionManager.totalDiscardedThisTurn));
     }
 
     public void upp() {

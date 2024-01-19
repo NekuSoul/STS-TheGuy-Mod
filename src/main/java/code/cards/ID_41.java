@@ -1,13 +1,17 @@
 package code.cards;
 
 import code.cards.AbstractEasyCard;
+import code.powers.LambdaPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.EnergyDownPower;
 
 import static code.ModFile.makeID;
@@ -32,7 +36,19 @@ public class ID_41 extends AbstractEasyCard {
 
         atb(new DrawCardAction(magicNumber));
         this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
-        this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1, false), 1));
+
+        applyToSelf(new LambdaPower(makeID("ID_41_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, 1) {
+
+            @Override
+            public void atStartOfTurn() {
+                atb(new LoseEnergyAction(amount));
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_41_Power")));
+            }
+            @Override
+            public void updateDescription() {
+                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
+            }
+        });
     }
     public void use(AbstractPlayer p, AbstractMonster m)
     {
