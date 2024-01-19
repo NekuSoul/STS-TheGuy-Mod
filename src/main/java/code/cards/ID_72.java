@@ -3,6 +3,7 @@ package code.cards;
 import code.actions.ID_72Action;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static code.ModFile.makeID;
@@ -22,6 +23,7 @@ public class ID_72 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
         atb(new ID_72Action(m,false));
     }
 
