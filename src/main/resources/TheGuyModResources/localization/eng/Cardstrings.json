@@ -93,7 +93,7 @@
   },
   "${ModID}:ID_26": {
     "NAME": "Insurance",
-    "DESCRIPTION": "Whenever you draw or discard a card this turn gain !B! Block."
+    "DESCRIPTION": "Whenever you draw or discard a card this turn gain !M! Block."
   },
   "${ModID}:ID_27": {
     "NAME": "Caffeine",
@@ -113,11 +113,15 @@
   },
   "${ModID}:ID_31": {
     "NAME": "Raising Bars",
-    "DESCRIPTION": "The effect of cost X cards will always be at least !M!."
+    "DESCRIPTION": "{!Upgrades!|>0=Innate.} The effect of cost X cards will always be at least !M!."
+  },
+  "${ModID}:ID_33": {
+    "NAME": "Take Five",
+    "DESCRIPTION": "{@@}{The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 10 [E]. Draw 5 cards.|>0=Choose five times between five effects.}"
   },
   "${ModID}:ID_34": {
     "NAME": "Front Flip",
-    "DESCRIPTION": "Gain 15 !B! Block. Draw 2 cards. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Draw 2 cards. Exhaust."
   },
   "${ModID}:ID_35": {
     "NAME": "Reversal",
@@ -130,6 +134,10 @@
   "${ModID}:ID_37": {
     "NAME": "Protective Hat",
     "DESCRIPTION": "When this ard is discarded heal !M! and exhaust this card."
+  },
+  "${ModID}:ID_38": {
+    "NAME": "Horrify",
+    "DESCRIPTION": "Whenever you deal damage this turn apply !M! Vulnerable to ALL enemies.}"
   },
   "${ModID}:ID_39": {
     "NAME": "Countdown",
@@ -213,11 +221,11 @@
   },
   "${ModID}:ID_59": {
     "NAME": "Fruit Punch",
-    "DESCRIPTION": "Gain 2 [E]. Heal !M! HP. Exhaust."
+    "DESCRIPTION": "{!Upgrades!|>0=Retain.} Gain 2 [E]. Heal !M! HP. Exhaust."
   },
   "${ModID}:ID_60": {
     "NAME": "Power Punch",
-    "DESCRIPTION": "{@@}Punch cards cost 1 less. {!Upgrades!|>0=Draw 1 card.}"
+    "DESCRIPTION": "{@@}Punches cost 1 [E] less. {!Upgrades!|>0=Draw a card whenever you play a Punch.}"
   },
   "${ModID}:ID_61": {
     "NAME": "Pose",
@@ -225,7 +233,7 @@
   },
   "${ModID}:ID_62": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain X Strength. Exhaust."
+    "DESCRIPTION": "Gain X {!Upgrades!|>0=+1}Strength. Exhaust."
   },
   "${ModID}:ID_63": {
     "NAME": "Cleanup",
