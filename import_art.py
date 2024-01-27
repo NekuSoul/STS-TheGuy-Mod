@@ -14,25 +14,25 @@ csvfile = open('STSModTable.csv', newline='')
 csvreader = csv.reader(csvfile)
 next(csvreader)
 
-# for row in csvreader:
-# 	if row[1] == '':
-# 		continue
+for row in csvreader:
+	if row[1] == '':
+		continue
 
-# 	inputfile = "art/ID_" + row[0] + ".kra";
-# 	if not os.path.isfile(inputfile):
-# 		continue
+	inputfile = "art/ID_" + row[0] + ".kra";
+	if not os.path.isfile(inputfile):
+		continue
 
-# 	outputfile = cardpath + "/ID_" + row[0] + ".png";
-# 	if os.path.isfile(outputfile):
-# 		os.remove(outputfile)
+	outputfile = cardpath + "/ID_" + row[0] + ".png";
+	if os.path.isfile(outputfile):
+		os.remove(outputfile)
 
-# 	print('Converting ' + row[1] + '...')
-# 	subprocess.run(["krita", inputfile, "--export", "--export-filename", outputfile], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+	print('Converting ' + row[1] + '...')
+	subprocess.run(["krita", inputfile, "--export", "--export-filename", outputfile], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-#for file in glob.glob("art/*.png"):
-#	shutil.copyfile(file, os.path.expanduser(cardpath) + pathlib.Path(file).name)
+for file in glob.glob("art/*.png"):
+	shutil.copyfile(file, os.path.expanduser(cardpath) + pathlib.Path(file).name)
 
-#subprocess.run(["java", "-jar", converter], cwd = converterpath);
+subprocess.run(["java", "-jar", converter], cwd = converterpath);
 
 csvfile = open('STSModTable.csv', newline='')
 csvreader = csv.reader(csvfile)
