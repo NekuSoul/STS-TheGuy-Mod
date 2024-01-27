@@ -34,13 +34,16 @@ public class ID_55 extends AbstractEasyCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m)
     {
+        int handCardCount = 0;
         java.util.Iterator<com.megacrit.cardcrawl.cards.AbstractCard> t = p.hand.group.iterator();
         while(true)
         {
             if(t.hasNext()) {
                 AbstractCard c = t.next();
                 if(c.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY))                {
-                    break;
+                    handCardCount++;
+                    if(handCardCount > 1)
+                        break;
                 }
             }
             else{

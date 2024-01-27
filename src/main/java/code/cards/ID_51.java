@@ -1,5 +1,6 @@
 package code.cards;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,18 +21,19 @@ public class ID_51 extends AbstractEasyCard {
     }
     public void onRetained()
     {
-        if(secondMagic >= 0)
-            secondMagic --;
+            secondMagic ++;
     }
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        this.addToTop(new DrawCardAction(p, magicNumber-secondMagic));
+        this.addToBot(new DiscardAction(p,p,magicNumber,false));
+        this.addToTop(new DrawCardAction(p, secondMagic));
+
     }
 
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        upgradeMagicNumber(1);
-        upgradeBaseCost(1);
+        //upgradeMagicNumber(0);
+        upgradeBaseCost(0);
     }
 }

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,14 +32,14 @@ public class ID_27 extends AbstractEasyCard {
     {
         applyToSelf(new LambdaPower(makeID("ID_27_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
-            @Override
-            public void onRefreshHand() {
-                AbstractPlayer p = AbstractDungeon.player;
-                if (AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.actionManager.turnHasEnded && !AbstractDungeon.player.hasPower("No Draw") && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && (AbstractDungeon.player.discardPile.size() > 0 || AbstractDungeon.player.drawPile.size() > 0)) {
-                    this.flash();
-                    this.addToBot(new DrawCardAction(p, 1));
-                }
+
+            public boolean canPlay(AbstractCard card)
+            {
+                if(AbstractDungeon.player.hand.isEmpty())
+                    atb(new DrawCardAction(1));
+                return true;
             }
+
 
             @Override
             public void updateDescription() {
