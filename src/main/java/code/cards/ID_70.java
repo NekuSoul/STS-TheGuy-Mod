@@ -28,13 +28,15 @@ public class ID_70 extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(makeID("ID_63_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_70_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action)
             {
-                if(card.cardID != makeID("ID_80")) return;
-                atb(new DamageAllEnemiesAction(p,amount, DamageInfo.DamageType.HP_LOSS, AbstractGameAction.AttackEffect.FIRE));
+                if(card.cardID.equals(makeID("ID_80")))
+                {
+                    atb(new DamageAllEnemiesAction(p,amount, DamageInfo.DamageType.HP_LOSS, AbstractGameAction.AttackEffect.FIRE));
+                }
             }
 
 

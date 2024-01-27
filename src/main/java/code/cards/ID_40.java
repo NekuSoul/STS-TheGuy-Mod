@@ -44,8 +44,10 @@ public class ID_40 extends AbstractEasyCard {
                 for (int i = 0; i < amount; i++)
                 {
                     AbstractCard newCard = card.makeCopy();
-                    if (card.costForTurn >= 0)
+                    if (card.costForTurn >= 0) {
                         newCard.cost = 0;
+                        newCard.isCostModified = true;
+                    }
                     if (magicNumber == 1)
                         newCard.upgrade();
 
