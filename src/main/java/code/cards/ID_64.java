@@ -14,21 +14,21 @@ public class ID_64 extends AbstractEasyCard {
     // intellij stuff attack, enemy, common, 9, 4, 0, 0, 1, 0
 
     public ID_64() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
-        baseBlock = 0;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseDamage = 0;
+        baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         atb(new MakeTempCardInHandAction(new ID_80()));
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        blck();
     }
 
     public void upp() {
-        upgradeDamage(4);
-        //upgradeBlock(0);
+        //upgradeDamage(4);
+        upgradeBlock(3);
         //upgradeMagicNumber(0);
         //upgradeBaseCost(1);
     }

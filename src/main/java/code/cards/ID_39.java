@@ -23,7 +23,7 @@ public class ID_39 extends AbstractEasyCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 10;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
