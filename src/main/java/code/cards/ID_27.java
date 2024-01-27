@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static code.ModFile.makeID;
 import static code.util.Wiz.*;
@@ -30,13 +31,14 @@ public class ID_27 extends AbstractEasyCard {
             @Override
             public void onDrawOrDiscard()
             {
-                if(AbstractDungeon.player.hand.isEmpty())
+                AbstractPlayer p = AbstractDungeon.player;
+                if (AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.actionManager.turnHasEnded && !AbstractDungeon.player.hasPower("No Draw") && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && (!AbstractDungeon.player.discardPile.isEmpty() || !AbstractDungeon.player.drawPile.isEmpty()))
                     atb(new DrawCardAction(1));
             }
             @Override
             public void onAfterCardPlayed(AbstractCard usedCard)
             {
-                if(AbstractDungeon.player.hand.isEmpty())
+                if (AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.actionManager.turnHasEnded && !AbstractDungeon.player.hasPower("No Draw") && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && (!AbstractDungeon.player.discardPile.isEmpty() || !AbstractDungeon.player.drawPile.isEmpty()))
                     atb(new DrawCardAction(1));
             }
 
