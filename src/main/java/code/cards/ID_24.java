@@ -1,10 +1,8 @@
 package code.cards;
 
-import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -32,7 +30,7 @@ public class ID_24 extends AbstractEasyCard {
         while (cardsIterator.hasNext())
         {
             AbstractCard c = cardsIterator.next();
-            if(c.cardID == Strike.ID) {
+            if(c.cardID == ID_2.ID) {
                 atb(new ExhaustSpecificCardAction(c,p.hand));
                 return;
             }
@@ -46,7 +44,7 @@ public class ID_24 extends AbstractEasyCard {
         Iterator<AbstractCard> cardsIterator = p.hand.group.iterator();
         while (cardsIterator.hasNext())
         {
-            if(((AbstractCard) cardsIterator.next()).cardID == Strike.ID)
+            if(((AbstractCard) cardsIterator.next()).cardID == ID_2.ID)
                 return true;
         }
 

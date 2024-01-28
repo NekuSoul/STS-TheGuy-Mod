@@ -1,5 +1,9 @@
 {
-  "${ModID}:Strike": {
+  "${ModID}:ID_1": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:ID_2": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
@@ -286,10 +290,6 @@
   "${ModID}:ID_80": {
     "NAME": "Bargain",
     "DESCRIPTION": "Discard a card. Gain !M! [E]. Exhaust."
-  },
-  "${ModID}:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
   },
   "${ModID}:ExampleTwoAmountPowerCard": {
     "NAME": "Two Amount Power",

@@ -19,8 +19,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import code.cards.Defend;
-import code.cards.Strike;
+import code.cards.ID_1;
+import code.cards.ID_2;
 import code.relics.TodoItem;
 
 import java.util.ArrayList;
@@ -61,10 +61,10 @@ public class CharacterFile extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
-            retVal.add(Strike.ID);
+            retVal.add(ID_2.ID);
         }
         for (int i = 0; i < 4; i++) {
-            retVal.add(Defend.ID);
+            retVal.add(ID_1.ID);
         }
         retVal.add(ID_4.ID);
         return retVal;
