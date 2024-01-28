@@ -17,7 +17,7 @@
   },
   "${ModID}:ID_6": {
     "NAME": "Recoup",
-    "DESCRIPTION": "Add 1 Shiv to your hand for every card you discarded this turn."
+    "DESCRIPTION": "Add 1 Sneak Up with Exhaust to your hand for every card you discarded this turn."
   },
   "${ModID}:ID_7": {
     "NAME": "Grand Cleanse",
@@ -57,7 +57,7 @@
   },
   "${ModID}:ID_16": {
     "NAME": "Pre-planned",
-    "DESCRIPTION": "Discard 2 cards. Draw 1 extra card next turn."
+    "DESCRIPTION": "{@@}Discard 2 cards. Draw !M! extra card{!Upgrades!|>0=s} next turn."
   },
   "${ModID}:ID_17": {
     "NAME": "Sneak up",
@@ -81,7 +81,7 @@
   },
   "${ModID}:ID_22": {
     "NAME": "Lash out",
-    "DESCRIPTION": "Unplayable. When discarded deal !D! to ALL enemies."
+    "DESCRIPTION": "Unplayable. When discarded deal !D! to ALL enemies. Return this card from the discard pile whenever you discard a card from your hand."
   },
   "${ModID}:ID_23": {
     "NAME": "Lightningclap",
@@ -117,7 +117,7 @@
   },
   "${ModID}:ID_31": {
     "NAME": "Raising Bars",
-    "DESCRIPTION": "{!Upgrades!|>0=Innate.} The effect of cost X cards will always be at least !M!."
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Innate.} The effect of cost X cards will always be at least !M!."
   },
   "${ModID}:ID_33": {
     "NAME": "Take Five",
@@ -133,7 +133,7 @@
   },
   "${ModID}:ID_36": {
     "NAME": "Stay Sharp",
-    "DESCRIPTION": "{@@}Play the next X{!Upgrades!|>0=+1} cards that would be discarded. Exhaust."
+    "DESCRIPTION": "{@@}Play the next X cards that would be discarded. {!Upgrades!|<1=Exhaust.}"
   },
   "${ModID}:ID_37": {
     "NAME": "Protective Hat",
@@ -157,7 +157,7 @@
   },
   "${ModID}:ID_42": {
     "NAME": "Charged Punch",
-    "DESCRIPTION": "Deal !D! damage plus damage equal to the amount of cards in your discard pile."
+    "DESCRIPTION": "{@@}Deal {!Upgrades!|>0=!D! damage plus }damage equal to the amount of cards in your discard pile."
   },
   "${ModID}:ID_43": {
     "NAME": "Hook Punch",
@@ -169,7 +169,7 @@
   },
   "${ModID}:ID_45": {
     "NAME": "Choo-Choo Mail",
-    "DESCRIPTION": "At the start of your turn {!Upgrades!|@=draw and discard a random card|>0=discard and draw a random card} for every Mark."
+    "DESCRIPTION": "{@@}At the start of your turn {!Upgrades!|@=draw and discard a random card|>0=discard and draw a random card} for every Mark."
   },
   "${ModID}:ID_46": {
     "NAME": "Night Watch",
@@ -193,7 +193,7 @@
   },
   "${ModID}:ID_51": {
     "NAME": "Opportunity",
-    "DESCRIPTION": "Retain. Draw !M! cards. Discard 3 cards, reduced by 1 for every turn this card has been retained."
+    "DESCRIPTION": "Retain. Discard 3 cards, Draw 1 card for every turn this card has been retained. (!M!)"
   },
   "${ModID}:ID_52": {
     "NAME": "Improve Potency",
@@ -225,7 +225,7 @@
   },
   "${ModID}:ID_59": {
     "NAME": "Fruit Punch",
-    "DESCRIPTION": "{!Upgrades!|>0=Retain.} Gain 2 [E]. Heal !M! HP. Exhaust."
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Retain.} Gain 2 [E]. Heal !M! HP. Exhaust."
   },
   "${ModID}:ID_60": {
     "NAME": "Power Punch",
@@ -237,7 +237,7 @@
   },
   "${ModID}:ID_62": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain X {!Upgrades!|>0=+1}Strength. Exhaust."
+    "DESCRIPTION": "{@@}Gain X {!Upgrades!|>0=+1}Strength. Exhaust."
   },
   "${ModID}:ID_63": {
     "NAME": "Cleanup",
@@ -285,7 +285,7 @@
   },
   "${ModID}:ID_74": {
     "NAME": "Last Ditch Effort",
-    "DESCRIPTION": "Gain 2*X Energy. Draw X cards. Gain X Fading. {!Upgrades!|@=Ethereal|>0=Retain}"
+    "DESCRIPTION": "{@@}Gain 2*X Energy. Draw X cards. Gain X Fading. {!Upgrades!|@=Ethereal|>0=Retain}"
   },
   "${ModID}:ID_80": {
     "NAME": "Bargain",
