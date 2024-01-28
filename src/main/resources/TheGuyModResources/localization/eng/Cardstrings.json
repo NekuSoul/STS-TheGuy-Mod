@@ -169,7 +169,7 @@
   },
   "${ModID}:ID_45": {
     "NAME": "Choo-Choo Mail",
-    "DESCRIPTION": "{@@}At the start of your turn {!Upgrades!|@=draw and discard a random card|>0=discard and draw a random card} for every Mark."
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Innate.} At the start of your turn, gain 1 Mark."
   },
   "${ModID}:ID_46": {
     "NAME": "Night Watch",
