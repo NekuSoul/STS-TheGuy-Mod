@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static code.ModFile.makeID;
 
-public class Strike extends AbstractEasyCard {
-    public final static String ID = makeID("Strike");
+public class ID_2 extends AbstractEasyCard {
+    public final static String ID = makeID("ID_2");
     // intellij stuff attack, enemy, basic, 6, 3,  , , , 
 
-    public Strike() {
+    public ID_2() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         setDamage(6, +3);
         tags.add(CardTags.STRIKE);
