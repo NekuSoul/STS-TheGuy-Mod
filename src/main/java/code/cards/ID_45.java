@@ -2,6 +2,7 @@ package code.cards;
 
 import code.cards.AbstractEasyCard;
 import code.powers.LambdaPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.MarkPower;
 
 import java.util.Iterator;
 
@@ -33,26 +35,7 @@ public class ID_45 extends AbstractEasyCard {
             @Override
             public void atStartOfTurn()
             {
-                AbstractPower ap = null;
-                if(!p.hasPower("PathToVictoryPower")) return;
-                Iterator<AbstractPower> var2 = p.powers.iterator();
-                do {
-                    if (!var2.hasNext()) {
-                        break;
-                    }
-                    ap = (AbstractPower)var2.next();
-                } while(!ap.ID.equals("PathToVictoryPower"));
-                int cnt = ap.amount;
-                if(magicNumber == 0)
-                {
-                    atb(new DrawCardAction(1));
-                    atb(new DiscardAction(p,p,1,true));
-                }
-                else
-                {
-                    atb(new DiscardAction(p, p, 1, true));
-                    atb(new DrawCardAction(1));
-                }
+                this.addToTop(new ApplyPowerAction(p, p, new MarkPower(p, amount)));
 
             }
             @Override
@@ -65,7 +48,8 @@ public class ID_45 extends AbstractEasyCard {
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        upgradeMagicNumber(1);
-        upgradeBaseCost(1);
+        //upgradeMagicNumber(1);
+        //upgradeBaseCost(1);
+        isInnate = true;
     }
 }

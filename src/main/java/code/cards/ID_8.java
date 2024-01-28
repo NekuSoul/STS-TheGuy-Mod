@@ -44,6 +44,12 @@ public class ID_8 extends AbstractEasyCard {
         addToBot(new DiscardAction(p, p, 3, false));
         addToBot(new DrawCardAction(magicNumber));
     }
+    @Override
+    public boolean canPlay(AbstractCard card) {
+        if(AbstractDungeon.player.hand.size() > 3)
+            return true;
+        return false;
+    }
 
     public void upp() {
         upgradeMagicNumber(1);

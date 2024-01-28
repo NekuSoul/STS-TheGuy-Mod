@@ -3,6 +3,8 @@ package code.cards;
 import code.CharacterFile;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,7 +26,8 @@ public class ID_42 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        applyPowers();
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         if (!this.upgraded) {
             this.rawDescription = cardStrings.DESCRIPTION;

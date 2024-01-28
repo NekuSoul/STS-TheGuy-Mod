@@ -5,6 +5,8 @@ import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +24,7 @@ public class ID_22 extends AbstractEasyCard {
 
     AbstractGameAction action;
     public ID_22() {
-        super(ID, -2, CardType.ATTACK, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseDamage = 2;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
@@ -33,8 +35,12 @@ public class ID_22 extends AbstractEasyCard {
 
     public void didDiscard() {
         AbstractPlayer p = AbstractDungeon.player;
-        if(p.discardPile.contains(this) && p.discardPile.getTopCard() != this && !AbstractDungeon.actionManager.actions.contains(action))
+        boolean check0 = p.discardPile.contains(this);
+        boolean check1 = p.discardPile.getTopCard() != this;
+        boolean check2 = !AbstractDungeon.actionManager.actions.contains(action);
+        if(check0 && check1 && check2)
         {
+            this.action.isDone = false;
             att(this.action);
         }
 
@@ -42,13 +48,13 @@ public class ID_22 extends AbstractEasyCard {
     }
     public void use(AbstractPlayer p, AbstractMonster m){ }
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+    public boolean canPlay(AbstractCard card) {
         return false;
     }
     @Override
     public void triggerOnManualDiscard()
     {
-        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, damage , damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, damage , DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     public void upp() {

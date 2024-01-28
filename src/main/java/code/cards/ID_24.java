@@ -1,11 +1,13 @@
 package code.cards;
 
+import code.actions.ID_24Action;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
@@ -18,7 +20,7 @@ public class ID_24 extends AbstractEasyCard {
     // intellij stuff attack, enemey, uncommon, 12, 6, 0, 0, 0, 0
 
     public ID_24() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 12;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
@@ -26,38 +28,21 @@ public class ID_24 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
-
-        Iterator<AbstractCard> cardsIterator = p.hand.group.iterator();
-        while (cardsIterator.hasNext())
-        {
-            AbstractCard c = cardsIterator.next();
-            if(c.cardID == Strike.ID) {
-                atb(new ExhaustSpecificCardAction(c,p.hand));
-                return;
-            }
-        }
-
-
+        atb(new ID_24Action());
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        Iterator<AbstractCard> cardsIterator = p.hand.group.iterator();
-        while (cardsIterator.hasNext())
-        {
-            if(((AbstractCard) cardsIterator.next()).cardID == Strike.ID)
-                return true;
-        }
-
+    public boolean canPlay(AbstractCard card)
+    {
+        if(AbstractDungeon.player.hand.size() > 2)
+            return true;
         return false;
-
     }
 
     public void upp() {
-        upgradeDamage(6);
+        //upgradeDamage(6);
         //upgradeBlock(0);
         //upgradeMagicNumber(0);
-        //upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

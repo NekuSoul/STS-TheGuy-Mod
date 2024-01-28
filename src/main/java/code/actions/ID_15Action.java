@@ -60,7 +60,7 @@ public class ID_15Action extends AbstractGameAction {
                 this.p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(false);
-                this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage - magicNumber, this.damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
+                this.addToBot(new DamageAction(m, new DamageInfo(p, magicNumber, this.damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
             }
 
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;

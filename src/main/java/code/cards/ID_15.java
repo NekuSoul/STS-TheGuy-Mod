@@ -21,7 +21,7 @@ public class ID_15 extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -33,7 +33,7 @@ public class ID_15 extends AbstractEasyCard {
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        upgradeMagicNumber(-2);
-        upgradeBaseCost(1);
+        upgradeMagicNumber(2);
+        //upgradeBaseCost(1);
     }
 }
