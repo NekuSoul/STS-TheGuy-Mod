@@ -34,8 +34,11 @@ ID_62 extends AbstractEasyCard {
         AbstractPlayer p = AbstractDungeon.player;
         if(this.upgraded)
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, amount+1), amount+1));
-        else
+        else {
+            if(amount == 0)
+                return true;
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, amount), amount));
+        }
         return true;
     }
 

@@ -45,7 +45,7 @@ public class ID_8 extends AbstractEasyCard {
         addToBot(new DrawCardAction(magicNumber));
     }
     @Override
-    public boolean canPlay(AbstractCard card) {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if(AbstractDungeon.player.hand.size() > 3)
             return true;
         return false;

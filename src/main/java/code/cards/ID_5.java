@@ -16,8 +16,8 @@ public class ID_5 extends AbstractEasyCard {
     // intellij stuff ATTACK, ENEMY, COMMON, 9, 3, 0, 0, 1, 0
 
     public ID_5() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 15;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(CharacterFile.THEGUY_TAGS.Punch_THE_GUY);

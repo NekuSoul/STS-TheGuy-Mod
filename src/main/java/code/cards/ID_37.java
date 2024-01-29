@@ -1,7 +1,10 @@
 package code.cards;
 
 import code.cards.AbstractEasyCard;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,14 +29,18 @@ public class ID_37 extends AbstractEasyCard {
     {
         AbstractPlayer p = AbstractDungeon.player;
         this.addToBot(new HealAction(p, p, this.magicNumber));
+        atb(new ExhaustSpecificCardAction(this,AbstractDungeon.player.discardPile,true));
     }
     public void use(AbstractPlayer p, AbstractMonster m){}
 
-
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
     public void upp() {
-        upgradeDamage(0);
-        upgradeBlock(0);
-        upgradeMagicNumber(7);
-        upgradeBaseCost(-2);
+        //upgradeDamage(0);
+        //upgradeBlock(0);
+        upgradeMagicNumber(3);
+        //upgradeBaseCost(-2);
     }
 }

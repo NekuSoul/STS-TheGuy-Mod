@@ -51,14 +51,14 @@ public class ID_23 extends AbstractEasyCard {
 
         while(var3.hasNext()) {
             mo = (AbstractMonster)var3.next();
-            this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
 
     public void upp() {
         upgradeDamage(3);
         //upgradeBlock(0);
-        //upgradeMagicNumber(1);
+        upgradeMagicNumber(1);
         //upgradeBaseCost(1);
     }
 }
