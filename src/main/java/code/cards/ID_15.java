@@ -21,19 +21,19 @@ public class ID_15 extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        addToBot(new ID_15Action(p,m,2,damage,magicNumber, this.damageTypeForTurn));
+        addToBot(new ID_15Action(p,m,magicNumber,damage,damage, this.damageTypeForTurn));
     }
 
     public void upp() {
-        //upgradeDamage(0);
+        upgradeDamage(2);
         //upgradeBlock(0);
-        upgradeMagicNumber(2);
+        //upgradeMagicNumber(2);
         //upgradeBaseCost(1);
     }
 }

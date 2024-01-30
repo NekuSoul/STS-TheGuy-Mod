@@ -26,7 +26,7 @@ public class ID_5 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        addToBot(new DiscardAction(p, p, 1, false));
+        addToBot(new DiscardAction(p, p, magicNumber, false));
         addToBot(new DrawCardAction(magicNumber));
     }
 
