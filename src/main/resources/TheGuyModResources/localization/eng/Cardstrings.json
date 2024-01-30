@@ -25,7 +25,7 @@
   },
   "${ModID}:ID_8": {
     "NAME": "Daring Draw",
-    "DESCRIPTION": "{@@}Discard 3 cards. Draw !M! card{!M!|>1=s}."
+    "DESCRIPTION": "Retain. Retain Basic cards when this card is retained. Discard 3 cards. Draw !M! cards."
   },
   "${ModID}:ID_9": {
     "NAME": "Prepare Ambush",
@@ -73,11 +73,11 @@
   },
   "${ModID}:ID_20": {
     "NAME": "Grapple",
-    "DESCRIPTION": "{@@}Deal !D! damage. Gain !M! [E] next turn. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Gain !M! [E] next turn."
   },
   "${ModID}:ID_21": {
     "NAME": "Caution",
-    "DESCRIPTION": "Gain !B! Block. Apply !M! Weak."
+    "DESCRIPTION": "Gain !B! Block. When discarded apply !M! Weak to ALL enemies."
   },
   "${ModID}:ID_22": {
     "NAME": "Lash out",
@@ -89,7 +89,7 @@
   },
   "${ModID}:ID_24": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "Exhaust a Strike from your hand. Deal !D! damage."
+    "DESCRIPTION": "Swap the base numbers of two cards."
   },
   "${ModID}:ID_25": {
     "NAME": "Desperate Strike",
@@ -121,7 +121,19 @@
   },
   "${ModID}:ID_33": {
     "NAME": "Take Five",
-    "DESCRIPTION": "{@@}{The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 10 [E]. Draw 5 cards.|>0=Choose five times between five effects.}"
+    "DESCRIPTION": "{@@}{The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 5 [E] next turn. Draw 5 cards next turn.|>0=Choose five times between five effects.}",
+    "EXTENDED_DESCRIPTION": [
+      "Strength",
+      "Gain 5 Strength.",
+      "Dexterity",
+      "Gain 5 Dexterity.",
+      "Marks",
+      "Gain 5 Marks.",
+      "Energy",
+      "Gain 5 Energy next turn.",
+      "Cards",
+      "Draw 5 cards next turn."
+    ]
   },
   "${ModID}:ID_34": {
     "NAME": "Front Flip",
@@ -133,7 +145,7 @@
   },
   "${ModID}:ID_36": {
     "NAME": "Stay Sharp",
-    "DESCRIPTION": "{@@}Play the next X cards that would be discarded. {!Upgrades!|<1=Exhaust.}"
+    "DESCRIPTION": "{@@}When you discard the next X cards, play the top card of your discard pile. {!Upgrades!|<1=Exhaust.}"
   },
   "${ModID}:ID_37": {
     "NAME": "Protective Hat",
@@ -245,7 +257,7 @@
   },
   "${ModID}:ID_64": {
     "NAME": "Take the Deal",
-    "DESCRIPTION": "Deal !D! damage. Add 1 Bargain into your hand."
+    "DESCRIPTION": "Gain !D! Block. Add 1 Bargain into your hand."
   },
   "${ModID}:ID_65": {
     "NAME": "Desperate Plea",
@@ -253,7 +265,7 @@
   },
   "${ModID}:ID_66": {
     "NAME": "Smokescreen",
-    "DESCRIPTION": "Exhaust a card. Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Exhaust a card. Enemy loses Strength equal to the cost of that card."
   },
   "${ModID}:ID_67": {
     "NAME": "Splatter",

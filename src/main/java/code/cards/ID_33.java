@@ -40,11 +40,11 @@ public class ID_33 extends AbstractEasyCard {
         else
         {
             ArrayList<AbstractCard> easyCardList = new ArrayList<>();
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[0]", "cardStrings.EXTENDED_DESCRIPTION[1]" + magicNumber + "cardStrings.EXTENDED_DESCRIPTION[2]", () -> applyToSelfTop(new StrengthPower(p, magicNumber))));
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[3]", "cardStrings.EXTENDED_DESCRIPTION[4]"+ magicNumber + "cardStrings.EXTENDED_DESCRIPTION[5]", () -> applyToSelfTop(new DexterityPower(p, magicNumber))));
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[6]", "cardStrings.EXTENDED_DESCRIPTION[7]"+ magicNumber + "cardStrings.EXTENDED_DESCRIPTION[8]", () -> att(new GainEnergyAction(magicNumber))));
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[9]", "cardStrings.EXTENDED_DESCRIPTION[10]"+ magicNumber + "cardStrings.EXTENDED_DESCRIPTION[11]", () -> att(new DrawCardAction(magicNumber))));
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[12]", "cardStrings.EXTENDED_DESCRIPTION[13]"+ magicNumber + "cardStrings.EXTENDED_DESCRIPTION[14]", () -> applyToSelfTop(new MarkPower(p, secondMagic))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[0]", "cardStrings.EXTENDED_DESCRIPTION[1]", () -> applyToSelfTop(new StrengthPower(p, magicNumber))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[2]", "cardStrings.EXTENDED_DESCRIPTION[3]", () -> applyToSelfTop(new DexterityPower(p, magicNumber))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[4]", "cardStrings.EXTENDED_DESCRIPTION[5]", () -> att(new GainEnergyAction(magicNumber))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[6]", "cardStrings.EXTENDED_DESCRIPTION[7]", () -> att(new DrawCardAction(magicNumber))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[8]", "cardStrings.EXTENDED_DESCRIPTION[9]", () -> applyToSelfTop(new MarkPower(p, secondMagic))));
             for (int i = 0; i < magicNumber; i++) {
                 atb(new EasyModalChoiceAction(easyCardList));
             }
