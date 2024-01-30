@@ -20,14 +20,14 @@ public class ID_6 extends AbstractEasyCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 1;
         cardsToPreview = new ID_17();
         cardsToPreview.purgeOnUse = true;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        atb(new ID_6Action(cardsToPreview, GameActionManager.totalDiscardedThisTurn));
+        atb(new ID_6Action(cardsToPreview, GameActionManager.totalDiscardedThisTurn * magicNumber));
     }
 
     public void upp() {
