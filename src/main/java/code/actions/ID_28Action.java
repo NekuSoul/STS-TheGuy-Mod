@@ -44,6 +44,8 @@ public class ID_28Action extends AbstractGameAction {
                 int cnt;
                 if(tmpCard.cost == -1)
                     cnt = EnergyPanel.getCurrentEnergy();
+                if(tmpCard.cost == -2)
+                    cnt = 0;
                 else
                     cnt = tmpCard.costForTurn;
                 p.hand.moveToDiscardPile(tmpCard);

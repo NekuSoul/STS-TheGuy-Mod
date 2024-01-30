@@ -2,6 +2,7 @@ package code.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ScrapeFollowUpAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,6 +34,8 @@ public class ID12_Action extends AbstractGameAction {
             if (this.p.hand.isEmpty()) {
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
+                AbstractCard c = AbstractDungeon.player.hand.getTopCard();
+                addToBot(new DiscardSpecificCardAction(c,AbstractDungeon.player.hand));
                 this.addToBot(new DrawCardAction(amount, new ID_12DrawFollowUpAction(this.p.hand.getBottomCard().type)));
                 this.isDone = true;
             } else {

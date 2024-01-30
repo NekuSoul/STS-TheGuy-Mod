@@ -2,12 +2,15 @@ package code.cards;
 
 import code.actions.EasyModalChoiceAction;
 import code.cards.AbstractEasyCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.MarkPower;
 
@@ -21,7 +24,7 @@ public class ID_33 extends AbstractEasyCard {
     // intellij stuff skill, self, rare, 0, 0, 0, 0, 5, 0
 
     public ID_33() {
-        super(ID, 5, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 7, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 5;
@@ -33,8 +36,8 @@ public class ID_33 extends AbstractEasyCard {
         {
             applyToSelf(new StrengthPower(p,magicNumber));
             applyToSelf(new DexterityPower(p,magicNumber));
-            atb(new GainEnergyAction(magicNumber));
-            atb(new DrawCardAction(magicNumber));
+            applyToSelf(new EnergizedPower(p,magicNumber));
+            atb(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
             applyToSelf(new MarkPower(p,magicNumber));
         }
         else
@@ -53,9 +56,9 @@ public class ID_33 extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeDamage(0);
-        upgradeBlock(0);
-        upgradeMagicNumber(0);
-        upgradeBaseCost(5);
+        //upgradeDamage(0);
+        //upgradeBlock(0);
+        //upgradeMagicNumber(0);
+        //upgradeBaseCost(5);
     }
 }
