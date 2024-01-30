@@ -16,7 +16,7 @@ public class ID_50 extends AbstractEasyCard {
 
     public ID_50() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        baseDamage = 5;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
     }
@@ -30,9 +30,9 @@ public class ID_50 extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeDamage(7);
-        upgradeBlock(0);
-        upgradeMagicNumber(0);
-        upgradeBaseCost(2);
+        upgradeDamage(3);
+        //upgradeBlock(0);
+        //upgradeMagicNumber(0);
+        //upgradeBaseCost(2);
     }
 }

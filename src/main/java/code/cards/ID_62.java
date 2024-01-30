@@ -31,14 +31,10 @@ ID_62 extends AbstractEasyCard {
 
     public boolean action(int amount, int[] params)
     {
+        amount += magicNumber;
+        if(amount == 0) return true;
         AbstractPlayer p = AbstractDungeon.player;
-        if(this.upgraded)
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, amount+1), amount+1));
-        else {
-            if(amount == 0)
-                return true;
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, amount), amount));
-        }
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, amount), amount));
         return true;
     }
 

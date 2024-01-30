@@ -24,7 +24,7 @@ public class ID_36 extends AbstractEasyCard {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 0;
         exhaust = true;
     }
 
@@ -38,7 +38,7 @@ public class ID_36 extends AbstractEasyCard {
     {
         AbstractPlayer p = AbstractDungeon.player;
 
-        applyToSelf(new LambdaPower(makeID("ID_36_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount*magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_36_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount) {
 
             @Override
             public void onManualDiscard()

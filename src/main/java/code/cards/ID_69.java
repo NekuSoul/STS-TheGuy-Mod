@@ -26,7 +26,7 @@ public class ID_69 extends AbstractEasyCard {
     {
         for(int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); ++i) {
             AbstractMonster target = (AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
-            this.addToBot(new ID_69Action(target, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+            this.addToBot(new ID_69Action(target, new DamageInfo(p, this.damage, this.damageTypeForTurn),magicNumber));
         }
     }
 

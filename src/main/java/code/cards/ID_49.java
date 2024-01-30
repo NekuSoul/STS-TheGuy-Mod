@@ -28,30 +28,17 @@ public class ID_49 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_49_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, 0) {
+        applyToSelf(new LambdaPower(makeID("ID_49_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void onManualDiscard()
             {
-                AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
                 AbstractCard card = p.discardPile.getTopCard();
-                //this.addToTop(new NewQueueCardAction(card, target, false, true));
-                if(magicNumber == 1)
-                    card.modifyCostForCombat(-1);
-                else
-                {
-                    card.modifyCostForCombat(-999);
-                }
-
+                card.modifyCostForCombat(-amount);
             }
             @Override
             public void updateDescription() {
-                if(magicNumber == 0) {
-                    description = "1";
-                }
-                else {
-                    description = "2";
-                }
+                description = "2";
             }
         });
     }
@@ -59,7 +46,7 @@ public class ID_49 extends AbstractEasyCard {
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        upgradeMagicNumber(1);
-        //upgradeBaseCost(1);
+        //upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }

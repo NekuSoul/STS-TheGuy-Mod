@@ -24,11 +24,7 @@ public class ID_46 extends AbstractEasyCard {
     @Override
     public void triggerOnManualDiscard()
     {
-        if (this.upgraded) {
-            this.addToTop(new GainEnergyAction(magicNumber));
-        } else {
-            this.addToTop(new GainEnergyAction(magicNumber));
-        }
+        this.addToTop(new GainEnergyAction(magicNumber));
     }
     public void use(AbstractPlayer p, AbstractMonster m)
     {
@@ -39,6 +35,6 @@ public class ID_46 extends AbstractEasyCard {
         //upgradeDamage(0);
         //upgradeBlock(0);
         upgradeMagicNumber(1);
-        upgradeBaseCost(1);
+        //upgradeBaseCost(1);
     }
 }

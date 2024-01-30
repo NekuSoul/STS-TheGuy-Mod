@@ -33,13 +33,13 @@ public class ID_27 extends AbstractEasyCard {
             {
                 AbstractPlayer p = AbstractDungeon.player;
                 if (AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.actionManager.turnHasEnded && !AbstractDungeon.player.hasPower("No Draw") && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && (!AbstractDungeon.player.discardPile.isEmpty() || !AbstractDungeon.player.drawPile.isEmpty()))
-                    atb(new DrawCardAction(1));
+                    atb(new DrawCardAction(amount));
             }
             @Override
             public void onAfterCardPlayed(AbstractCard usedCard)
             {
                 if (AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.actionManager.turnHasEnded && !AbstractDungeon.player.hasPower("No Draw") && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && (!AbstractDungeon.player.discardPile.isEmpty() || !AbstractDungeon.player.drawPile.isEmpty()))
-                    atb(new DrawCardAction(1));
+                    atb(new DrawCardAction(amount));
             }
 
 

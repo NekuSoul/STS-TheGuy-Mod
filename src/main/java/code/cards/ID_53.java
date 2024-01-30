@@ -18,12 +18,12 @@ public class ID_53 extends AbstractEasyCard {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_53_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, 0) {
+        applyToSelf(new LambdaPower(makeID("ID_53_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void atStartOfTurn() {
@@ -32,11 +32,11 @@ public class ID_53 extends AbstractEasyCard {
             }
             @Override
             public void onInitialApplication() {
-                --AbstractDungeon.player.gameHandSize;
+                AbstractDungeon.player.gameHandSize -= amount;
             }
             @Override
             public void onRemove() {
-                ++AbstractDungeon.player.gameHandSize;
+                AbstractDungeon.player.gameHandSize += amount;
             }
 
             @Override

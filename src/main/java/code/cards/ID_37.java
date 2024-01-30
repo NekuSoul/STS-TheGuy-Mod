@@ -22,6 +22,7 @@ public class ID_37 extends AbstractEasyCard {
         baseBlock = 0;
         baseMagicNumber = magicNumber = 5;
         exhaust = true;
+        this.tags.add(CardTags.HEALING);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class ID_66 extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 0;
         exhaust = true;
     }
 
@@ -32,10 +32,15 @@ public class ID_66 extends AbstractEasyCard {
         atb(new ID_66Action(m));
     }
 
+    @Override
+    public boolean canUpgrade()
+    {
+        return false;
+    }
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
         //upgradeBaseCost(1);
     }
 }

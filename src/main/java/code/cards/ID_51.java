@@ -3,6 +3,7 @@ package code.cards;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static code.ModFile.makeID;
@@ -16,18 +17,22 @@ public class ID_51 extends AbstractEasyCard {
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 3;
-        baseSecondMagic = secondMagic = 3;
         selfRetain = true;
     }
     public void onRetained()
     {
-            secondMagic ++;
+        magicNumber ++;
     }
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        this.addToBot(new DiscardAction(p,p,magicNumber,false));
-        this.addToTop(new DrawCardAction(p, secondMagic));
-
+        this.addToBot(new DiscardAction(p,p,3,false));
+        this.addToTop(new DrawCardAction(p, magicNumber));
+    }
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m){
+        if(AbstractDungeon.player.hand.size() < 4)
+            return false;
+        return true;
     }
 
     public void upp() {

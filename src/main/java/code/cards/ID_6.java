@@ -27,7 +27,7 @@ public class ID_6 extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        atb(new ID_6Action(cardsToPreview, GameActionManager.totalDiscardedThisTurn * magicNumber));
+        atb(new ID_6Action(cardsToPreview, GameActionManager.totalDiscardedThisTurn));
     }
 
     public void upp() {

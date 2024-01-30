@@ -22,7 +22,7 @@ public class ID_64 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        atb(new MakeTempCardInHandAction(new ID_80()));
+        atb(new MakeTempCardInHandAction(new ID_80(),magicNumber));
         blck();
     }
 

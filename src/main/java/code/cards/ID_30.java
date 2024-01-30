@@ -21,7 +21,7 @@ public class ID_30 extends AbstractEasyCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -35,6 +35,7 @@ public class ID_30 extends AbstractEasyCard {
                         public void onPlayCard(AbstractCard card, AbstractMonster m)
                         {
                             if(card.cost != -1) return;
+                            if(amount < 1) return;
                             card.freeToPlayOnce = true;
                             amount--;
                             if(amount == 0)
@@ -42,32 +43,19 @@ public class ID_30 extends AbstractEasyCard {
 
                         }
                         @Override
+                        public void atEndOfTurn(boolean isPlayer) {
+                            if(isPlayer)
+                                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_30_Power_Power")));
+                        }
+                        @Override
                         public void updateDescription() {
                             description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
                         }
+
+
                     });
                 }
 
-                @Override
-                public void onInitialApplication() {
-                    applyToSelf(new LambdaPower(makeID("ID_30_Power_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
-
-                        @Override
-                        public void onPlayCard(AbstractCard card, AbstractMonster m)
-                        {
-                            if(card.cost != -1) return;
-                            card.freeToPlayOnce = true;
-                            amount--;
-                            if(amount == 0)
-                                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_30_Power_Power")));
-
-                        }
-                        @Override
-                        public void updateDescription() {
-                            description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
-                        }
-                    });
-            }
                 @Override
                 public void updateDescription() {
                     description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];

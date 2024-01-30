@@ -20,7 +20,7 @@ public class ID_24 extends AbstractEasyCard {
 
     public ID_24() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseDamage = 12;
+        baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
     }
@@ -31,8 +31,7 @@ public class ID_24 extends AbstractEasyCard {
     }
 
     @Override
-    public boolean canPlay(AbstractCard card)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if(AbstractDungeon.player.hand.size() > 2)
             return true;
         return false;
@@ -42,6 +41,6 @@ public class ID_24 extends AbstractEasyCard {
         //upgradeDamage(6);
         //upgradeBlock(0);
         //upgradeMagicNumber(0);
-        upgradeBaseCost(0);
+        //upgradeBaseCost(0);
     }
 }

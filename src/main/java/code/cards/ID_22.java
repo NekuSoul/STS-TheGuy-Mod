@@ -25,9 +25,9 @@ public class ID_22 extends AbstractEasyCard {
     AbstractGameAction action;
     public ID_22() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseDamage = 2;
+        baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 0;
+        baseMagicNumber = magicNumber = 3;
 
         this.action = new ID_22Action(this);
     }
@@ -43,8 +43,6 @@ public class ID_22 extends AbstractEasyCard {
             this.action.isDone = false;
             atb(this.action);
         }
-
-
     }
     public void use(AbstractPlayer p, AbstractMonster m){ }
 
@@ -55,13 +53,13 @@ public class ID_22 extends AbstractEasyCard {
     @Override
     public void triggerOnManualDiscard()
     {
-        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, damage , DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, magicNumber , DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     public void upp() {
-        upgradeDamage(1);
+        //upgradeDamage(1);
         //upgradeBlock(0);
-        //upgradeMagicNumber(0);
+        upgradeMagicNumber(2);
         //upgradeBaseCost(0);
     }
 }

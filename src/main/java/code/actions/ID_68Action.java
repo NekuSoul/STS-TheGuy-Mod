@@ -9,7 +9,10 @@ public class ID_68Action extends AbstractGameAction {
 
     public ID_68Action(int divideAmountNum) {
         this.duration = Settings.ACTION_DUR_FAST;
-        this.divideAmount = divideAmountNum;
+        if( divideAmountNum > 1)
+            this.divideAmount = divideAmountNum;
+        else
+            this.divideAmount = 1;
     }
 
     public void update() {

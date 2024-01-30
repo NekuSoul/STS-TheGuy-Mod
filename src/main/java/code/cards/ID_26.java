@@ -20,28 +20,24 @@ public class ID_26 extends AbstractEasyCard {
     public ID_26() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 0;
-        baseBlock = 1;
-        baseMagicNumber = magicNumber = 0;
+        baseBlock = 0;
+        baseMagicNumber = magicNumber = 3;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_26_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, 0) {
+        applyToSelf(new LambdaPower(makeID("ID_26_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
 
             @Override
             public void onManualDiscard()
             {
-
-            }
-            public void onDrawOrDiscard()
-            {
-                if(justEvoked)
-                {
-                    justEvoked = false;
-                    return;
-                }
                 this.flash();
-                this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+                this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+            }
+
+            @Override
+            public void updateDescription() {
+
             }
 
             @Override
@@ -50,22 +46,13 @@ public class ID_26 extends AbstractEasyCard {
                 if(isPlayer)
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_26_Power")));
             }
-            @Override
-            public void updateDescription() {
-                if(magicNumber == 0) {
-                    description = "1";
-                }
-                else {
-                    description = "2";
-                }
-            }
         });
     }
 
     public void upp() {
         //upgradeDamage(0);
-        upgradeBlock(1);
-        //upgradeMagicNumber(0);
+        //upgradeBlock(1);
+        upgradeMagicNumber(2);
         //upgradeBaseCost(0);
     }
 }
