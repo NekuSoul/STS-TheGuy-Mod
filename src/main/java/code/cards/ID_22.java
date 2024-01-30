@@ -41,14 +41,15 @@ public class ID_22 extends AbstractEasyCard {
         if(check0 && check1 && check2)
         {
             this.action.isDone = false;
-            att(this.action);
+            atb(this.action);
         }
 
 
     }
     public void use(AbstractPlayer p, AbstractMonster m){ }
+
     @Override
-    public boolean canPlay(AbstractCard card) {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return false;
     }
     @Override
