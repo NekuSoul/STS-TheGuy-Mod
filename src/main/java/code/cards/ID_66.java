@@ -1,5 +1,6 @@
 package code.cards;
 
+import code.actions.ID_66Action;
 import code.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -28,13 +29,7 @@ public class ID_66 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        atb(new ExhaustAction(1,false,false,false));
-        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while(var3.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var3.next();
-            this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        }
+        atb(new ID_66Action(m));
     }
 
     public void upp() {
