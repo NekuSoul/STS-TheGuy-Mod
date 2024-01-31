@@ -32,6 +32,9 @@ public class ID_40 extends AbstractEasyCard {
 
     public boolean action(int amount, int[] params)
     {
+        amount+= magicNumber;
+
+        if(amount < 1) return true;
         AbstractPlayer p = AbstractDungeon.player;
 
         applyToSelf(new LambdaPower(makeID("ID_40_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount) {

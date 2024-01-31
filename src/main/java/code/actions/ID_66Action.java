@@ -48,7 +48,7 @@ public class ID_66Action extends AbstractGameAction {
                 else
                     cnt = tmpCard.costForTurn;
                 this.addToBot(new ApplyPowerAction(target, p, new StrengthPower(target, -cnt), -cnt));
-
+                p.hand.moveToExhaustPile(tmpCard);
                 this.isDone = true;
             } else {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, true);
