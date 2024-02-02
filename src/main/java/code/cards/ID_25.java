@@ -30,7 +30,7 @@ public class ID_25 extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        upgraded = this.upgraded
+        upgraded = this.upgraded;
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToSelf(new LambdaPower(makeID("ID_25_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
 
