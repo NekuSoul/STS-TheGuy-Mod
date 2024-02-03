@@ -24,7 +24,7 @@ public class ID_70 extends AbstractEasyCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,7 +35,7 @@ public class ID_70 extends AbstractEasyCard {
             {
                 if(card.cardID.equals(makeID("ID_80")))
                 {
-                    atb(new DamageAllEnemiesAction(p,amount, DamageInfo.DamageType.HP_LOSS, AbstractGameAction.AttackEffect.FIRE));
+                    atb(new DamageAllEnemiesAction(p,amount, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
                 }
             }
 
@@ -50,7 +50,7 @@ public class ID_70 extends AbstractEasyCard {
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(3);
         //upgradeBaseCost(1);
     }
 }

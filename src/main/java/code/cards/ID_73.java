@@ -52,6 +52,6 @@ public class ID_73 extends AbstractEasyCard {
         //upgradeDamage(0);
         //upgradeBlock(0);
         //upgradeMagicNumber(0);
-        //upgradeBaseCost(1);
+        upgradeBaseCost(1);
     }
 }
