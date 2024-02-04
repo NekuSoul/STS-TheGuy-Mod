@@ -16,7 +16,7 @@ public class ID_51 extends AbstractEasyCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 0;
         selfRetain = true;
     }
     public void onRetained()
