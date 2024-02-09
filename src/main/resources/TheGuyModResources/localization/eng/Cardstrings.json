@@ -53,7 +53,7 @@
   },
   "${ModID}:ID_15": {
     "NAME": "Hissy Fit",
-    "DESCRIPTION": "Discard up to 2 cards. Deal !D! damage. Deal !M! for every discarded card."
+    "DESCRIPTION": "Discard up to 2 cards. Deal !D! damage. Deal !D! for every discarded card."
   },
   "${ModID}:ID_16": {
     "NAME": "Pre-planned",
@@ -68,7 +68,7 @@
     "DESCRIPTION": "Whenever you gain Mark deal !D! to ALL enemies."
   },
   "${ModID}:ID_19": {
-    "NAME": "Quicken",
+    "NAME": "Tie up",
     "DESCRIPTION": "Deal !D! damage. Draw X cards."
   },
   "${ModID}:ID_20": {
@@ -81,7 +81,7 @@
   },
   "${ModID}:ID_22": {
     "NAME": "Lash out",
-    "DESCRIPTION": "Unplayable. When discarded deal !D! to ALL enemies. Return this card from the discard pile whenever you discard a card from your hand."
+    "DESCRIPTION": "Unplayable. When discarded deal !M! to ALL enemies. Return this card from the discard pile whenever you discard a card from your hand."
   },
   "${ModID}:ID_23": {
     "NAME": "Lightningclap",
@@ -93,7 +93,7 @@
   },
   "${ModID}:ID_25": {
     "NAME": "Desperate Strike",
-    "DESCRIPTION": "Deal !D! damage. Discard a random card next turn."
+    "DESCRIPTION": "{@@}Deal !D! damage. Discard !M! {!Upgrades!|<1=random } card next turn."
   },
   "${ModID}:ID_26": {
     "NAME": "Insurance",
@@ -113,7 +113,7 @@
   },
   "${ModID}:ID_30": {
     "NAME": "Headstart",
-    "DESCRIPTION": "The first cost X card played this turn is free."
+    "DESCRIPTION": "{@@}At the start of your turn, the first !M! cost X card{!Upgrades!|>0=s} do{!Upgrades!|<1=es}n't consume energy."
   },
   "${ModID}:ID_31": {
     "NAME": "Raising Bars",
@@ -157,11 +157,11 @@
   },
   "${ModID}:ID_39": {
     "NAME": "Countdown",
-    "DESCRIPTION": "After 10 cards are discarded deal !D! damage to ALL enemies."
+    "DESCRIPTION": "After !M! cards are discarded deal !D! damage to ALL enemies."
   },
   "${ModID}:ID_40": {
     "NAME": "Anger Form",
-    "DESCRIPTION": "{@@}When an attack with costs of X is played put an {!Upgrades!|>0=upgraded} copy that costs 0 into your discard pile."
+    "DESCRIPTION": "{@@}Whenever an attack is played put X{!Upgrades!|>0=+1} copies of it into your discard pile."
   },
   "${ModID}:ID_41": {
     "NAME": "Fundraiser",
@@ -249,7 +249,7 @@
   },
   "${ModID}:ID_62": {
     "NAME": "Workout",
-    "DESCRIPTION": "{@@}Gain X {!Upgrades!|>0=+1}Strength. Exhaust."
+    "DESCRIPTION": "{@@}Gain X {!Upgrades!|>0=+!M!}Strength. Exhaust."
   },
   "${ModID}:ID_63": {
     "NAME": "Cleanup",
@@ -257,7 +257,7 @@
   },
   "${ModID}:ID_64": {
     "NAME": "Take the Deal",
-    "DESCRIPTION": "Gain !D! Block. Add 1 Bargain into your hand."
+    "DESCRIPTION": "Gain !B! Block. Add !M! Bargain into your hand."
   },
   "${ModID}:ID_65": {
     "NAME": "Desperate Plea",
@@ -277,7 +277,7 @@
   },
   "${ModID}:ID_69": {
     "NAME": "Kollekte",
-    "DESCRIPTION": "Deal !D! to ALL enemies. Add 1 Bargain into your hand for each enemy hit."
+    "DESCRIPTION": "Deal !D! to ALL enemies. Add !M! Bargain into your hand for each enemy hit."
   },
   "${ModID}:ID_70": {
     "NAME": "Rip off",
@@ -293,11 +293,11 @@
   },
   "${ModID}:ID_73": {
     "NAME": "Great Deal",
-    "DESCRIPTION": "Whenever a X card is played add 1 Bargain into your hand."
+    "DESCRIPTION": "Whenever a X card is played add !M! Bargain into your hand."
   },
   "${ModID}:ID_74": {
     "NAME": "Last Ditch Effort",
-    "DESCRIPTION": "{@@}Gain 2*X Energy. Draw X cards. Gain X Fading. {!Upgrades!|@=Ethereal|>0=Retain}"
+    "DESCRIPTION": "{@@}Gain !M!*X Energy. Draw X cards. Gain X Fading. {!Upgrades!|@=Ethereal|>0=Retain}"
   },
   "${ModID}:ID_80": {
     "NAME": "Bargain",
