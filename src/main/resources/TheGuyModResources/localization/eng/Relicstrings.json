@@ -5,5 +5,40 @@
     "DESCRIPTIONS": [
       "Has no effect."
     ]
+  },
+  "${ModID}:Relic_2": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_3": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_4": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_5": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_6": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
   }
 }
