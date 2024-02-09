@@ -41,6 +41,7 @@ public class Relic_3 extends AbstractEasyRelic{
             for(int i = 0; i < 3; ++i) {
                 AbstractDungeon.effectList.add(new GainPennyEffect(targetCard.current_x,targetCard.current_y));
             }
+            this.flash();
         }
     }
 

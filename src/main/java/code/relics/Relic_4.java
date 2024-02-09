@@ -21,7 +21,6 @@ import static code.util.Wiz.applyToSelf;
 public class Relic_4 extends AbstractEasyRelic{
     public static final String ID = makeID("Relic_4");
 
-    int gainedgold = 0;
     public Relic_4() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
 
@@ -36,6 +35,7 @@ public class Relic_4 extends AbstractEasyRelic{
         if(AbstractDungeon.player.hand.isEmpty())
         {
             applyToSelf(new EnergizedPower(AbstractDungeon.player,1));
+            this.flash();
         }
     }
 

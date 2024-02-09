@@ -12,6 +12,7 @@ public class TodoItem extends AbstractEasyRelic {
     @Override
     public void atBattleStart() {
         AbstractDungeon.player.hand.addToHand(new ID_80());
+        this.flash();
     }
     public TodoItem() {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
