@@ -51,6 +51,7 @@ public class ID_29Action extends AbstractGameAction
             c.baseDraw *= multiplier;
             c.baseHeal *= multiplier;
             c.baseMagicNumber *= multiplier;
+            c.magicNumber *=multiplier;
             if(c.cost > 0) {
                 c.cost *= multiplier;
                 c.costForTurn = c.cost;
