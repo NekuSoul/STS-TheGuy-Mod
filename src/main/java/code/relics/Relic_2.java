@@ -20,7 +20,7 @@ public class Relic_2 extends AbstractEasyRelic{
     }
 
     public String getUpdatedDescription() {
-        return "this.DESCRIPTIONS[0];";
+        return this.DESCRIPTIONS[0];
     }
 
     @Override
