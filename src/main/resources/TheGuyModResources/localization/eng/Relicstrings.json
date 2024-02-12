@@ -1,37 +1,37 @@
 {
   "${ModID}:TodoItem": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "NCreate 1 Bargain at start of combat",
+    "FLAVOR": "FCreate 1 Bargain at start of combat",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "DCreate 1 Bargain at start of combat"
     ]
   },
   "${ModID}:Relic_2": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "X cards get upgraded when picked up",
+    "FLAVOR": "X cards get upgraded when picked up",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "X cards get upgraded when picked up"
     ]
   },
   "${ModID}:Relic_3": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "Gain 3 gold everytime you play a Bargain (12g max per combat)",
+    "FLAVOR": "Gain 3 gold everytime you play a Bargain (12g max per combat)",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Gain 3 gold everytime you play a Bargain (12g max per combat)"
     ]
   },
   "${ModID}:Relic_4": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "At the end of your turn if your hand is empty gain 1 Energy next turn",
+    "FLAVOR": "At the end of your turn if your hand is empty gain 1 Energy next turn",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "At the end of your turn if your hand is empty gain 1 Energy next turn"
     ]
   },
   "${ModID}:Relic_5": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "Gain 1 mark at Start of Turn",
+    "FLAVOR": "Gain 1 mark at Start of Turn",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Gain 1 mark at Start of Turn"
     ]
   },
   "${ModID}:Relic_6": {
