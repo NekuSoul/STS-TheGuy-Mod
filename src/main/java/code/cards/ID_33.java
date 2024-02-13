@@ -37,7 +37,7 @@ public class ID_33 extends AbstractEasyCard {
             applyToSelf(new StrengthPower(p,magicNumber));
             applyToSelf(new DexterityPower(p,magicNumber));
             applyToSelf(new EnergizedPower(p,magicNumber));
-            atb(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
+            applyToSelf(new DrawCardNextTurnPower(p,magicNumber));
             applyToSelf(new MarkPower(p,magicNumber));
         }
         else
@@ -45,8 +45,8 @@ public class ID_33 extends AbstractEasyCard {
             ArrayList<AbstractCard> easyCardList = new ArrayList<>();
             easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[0]", "cardStrings.EXTENDED_DESCRIPTION[1]", () -> applyToSelfTop(new StrengthPower(p, magicNumber))));
             easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[2]", "cardStrings.EXTENDED_DESCRIPTION[3]", () -> applyToSelfTop(new DexterityPower(p, magicNumber))));
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[4]", "cardStrings.EXTENDED_DESCRIPTION[5]", () -> att(new GainEnergyAction(magicNumber))));
-            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[6]", "cardStrings.EXTENDED_DESCRIPTION[7]", () -> att(new DrawCardAction(magicNumber))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[4]", "cardStrings.EXTENDED_DESCRIPTION[5]", () -> applyToSelf(new EnergizedPower(p,magicNumber))));
+            easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[6]", "cardStrings.EXTENDED_DESCRIPTION[7]", () -> applyToSelf(new DrawCardNextTurnPower(p,magicNumber))));
             easyCardList.add(new EasyModalChoiceCard("cardStrings.EXTENDED_DESCRIPTION[8]", "cardStrings.EXTENDED_DESCRIPTION[9]", () -> applyToSelfTop(new MarkPower(p, secondMagic))));
             for (int i = 0; i < magicNumber; i++) {
                 atb(new EasyModalChoiceAction(easyCardList));
