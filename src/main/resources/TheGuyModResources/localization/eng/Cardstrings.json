@@ -149,7 +149,7 @@
   },
   "${ModID}:ID_37": {
     "NAME": "Protective Hat",
-    "DESCRIPTION": "When this ard is discarded heal !M! and exhaust this card."
+    "DESCRIPTION": "When this card is discarded heal !M! and exhaust this card."
   },
   "${ModID}:ID_38": {
     "NAME": "Horrify",
@@ -197,7 +197,7 @@
   },
   "${ModID}:ID_49": {
     "NAME": "Compost Heap",
-    "DESCRIPTION": "{@@}After a card has been discarded reduce its cost {!Upgrades!|@=by 1|>0=to 0} [E]."
+    "DESCRIPTION": "{@@}After a card has been discarded reduce the cost of the top card of of your discard pile {!Upgrades!|@=by 1|>0=to 0} [E]."
   },
   "${ModID}:ID_50": {
     "NAME": "Struggle",
@@ -289,7 +289,7 @@
   },
   "${ModID}:ID_72": {
     "NAME": "Second Hand",
-    "DESCRIPTION": "Play the top card of your discard pile."
+    "DESCRIPTION": "Play the top card of your discard pile. Exhaust."
   },
   "${ModID}:ID_73": {
     "NAME": "Great Deal",
