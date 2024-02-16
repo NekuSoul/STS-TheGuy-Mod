@@ -119,6 +119,10 @@
     "NAME": "Raising Bars",
     "DESCRIPTION": "{@@}{!Upgrades!|>0=Innate.} The effect of cost X cards will always be at least !M!."
   },
+  "${ModID}:ID_32": {
+    "NAME": "Conspiracy Theory",
+    "DESCRIPTION": "{@@}Confuse yourself for 2 turns. Draw !M! card."
+  },
   "${ModID}:ID_33": {
     "NAME": "Take Five",
     "DESCRIPTION": "{@@}{The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 5 [E] next turn. Draw 5 cards next turn.|>0=Choose five times between five effects.}",
@@ -298,6 +302,10 @@
   "${ModID}:ID_74": {
     "NAME": "Last Ditch Effort",
     "DESCRIPTION": "{@@}Gain !M!*X Energy. Draw X cards. Gain X Fading. {!Upgrades!|@=Ethereal|>0=Retain}"
+  },
+  "${ModID}:ID_75": {
+    "NAME": "Avalanche",
+    "DESCRIPTION": "Deal !D! damage. When this card is discarded double the damage of this card and add !M! copy of this card into your discard pile."
   },
   "${ModID}:ID_80": {
     "NAME": "Bargain",
