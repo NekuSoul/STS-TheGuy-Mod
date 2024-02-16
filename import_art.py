@@ -58,12 +58,12 @@ for row in csvreader:
 
 	if row[2] == 'Attack':
 		shutil.copyfile(imagepath + "/Attacks/ID_" + row[0] + ".png", "src/main/resources/TheGuyModResources/images/cards/ID_" + row[0] + ".png")
-		shutil.copyfile(imagepath + "/Attacks/ID_" + row[0] + "_p.png", "src/main/resources/TheGuyModResources/images/powers/ID_" + row[0] + "_p.png")
+		shutil.copyfile(imagepath + "/Attacks/ID_" + row[0] + "_p.png", "src/main/resources/TheGuyModResources/images/cards/ID_" + row[0] + "_p.png")
 
 	if row[2] == 'Power':
 		shutil.copyfile(imagepath + "/Powers/ID_" + row[0] + ".png", "src/main/resources/TheGuyModResources/images/cards/ID_" + row[0] + ".png")
-		shutil.copyfile(imagepath + "/Powers/ID_" + row[0] + "_p.png", "src/main/resources/TheGuyModResources/images/powers/ID_" + row[0] + "_p.png")
+		shutil.copyfile(imagepath + "/Powers/ID_" + row[0] + "_p.png", "src/main/resources/TheGuyModResources/images/cards/ID_" + row[0] + "_p.png")
 
 	if row[2] == 'Skill':
 		shutil.copyfile(imagepath + "/Skills/ID_" + row[0] + ".png", "src/main/resources/TheGuyModResources/images/cards/ID_" + row[0] + ".png")
-		shutil.copyfile(imagepath + "/Skills/ID_" + row[0] + "_p.png", "src/main/resources/TheGuyModResources/images/powers/ID_" + row[0] + "_p.png")
+		shutil.copyfile(imagepath + "/Skills/ID_" + row[0] + "_p.png", "src/main/resources/TheGuyModResources/images/cards/ID_" + row[0] + "_p.png")

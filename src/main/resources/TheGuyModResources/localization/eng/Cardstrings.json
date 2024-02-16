@@ -169,7 +169,7 @@
   },
   "${ModID}:ID_42": {
     "NAME": "Charged Punch",
-    "DESCRIPTION": "{@@}Deal {!Upgrades!|>0=!D! damage plus }damage equal to the amount of cards in your discard pile."
+    "DESCRIPTION": "{@@}Deal{!Upgrades!|>0= !D! damage plus} damage equal to the amount of cards in your discard pile."
   },
   "${ModID}:ID_43": {
     "NAME": "Hook Punch",
