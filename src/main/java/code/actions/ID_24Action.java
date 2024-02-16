@@ -52,22 +52,20 @@ public class ID_24Action extends AbstractGameAction {
             int BaseDmg = card1.baseDamage;
             int BaseBlock = card1.baseBlock;
             int BaseMagicNr = card1.baseMagicNumber;
-            int cost = card1.cost;
-            int costForTurn = card1.costForTurn;
+            int MagicNr = card1.magicNumber;
+
 
             card1.baseDamage = card2.baseDamage;
             card1.baseBlock = card2.baseBlock;
             card1.baseMagicNumber = card2.baseMagicNumber;
-            card1.cost = card2.cost;
-            card1.costForTurn = card2.costForTurn;
-            card1.isCostModified = true;
+            card1.magicNumber = card2.magicNumber;
+
 
             card2.baseDamage = BaseDmg;
             card2.baseBlock = BaseBlock;
             card2.baseMagicNumber = BaseMagicNr;
-            card2.cost = cost;
-            card2.costForTurn = costForTurn;
-            card2.isCostModified = true;
+            card2.magicNumber = MagicNr;
+
 
             p.hand.addToHand(card1);
             p.hand.addToHand(card2);

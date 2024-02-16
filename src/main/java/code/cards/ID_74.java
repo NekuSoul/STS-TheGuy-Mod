@@ -48,9 +48,9 @@ public class ID_74 extends AbstractEasyCard {
             public void atEndOfTurn(boolean isPlayer)
             {
                 if(!isPlayer) return;
-                if (this.amount == 0 && !this.owner.isDying) {
+                if (this.amount == 1 && !this.owner.isDying) {
                     this.addToBot(new VFXAction(new ExplosionSmallEffect(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
-                    this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
+                    this.addToBot(new LoseHPAction(this.owner, this.owner, 69420));
                 } else {
                     this.addToBot(new ReducePowerAction(this.owner, this.owner, makeID("ID_74_Power"), 1));
                     this.updateDescription();
