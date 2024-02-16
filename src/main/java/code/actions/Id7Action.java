@@ -1,6 +1,7 @@
 package code.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
@@ -22,26 +23,32 @@ public class Id7Action extends AbstractGameAction {
 
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
-        Iterator cards = p.drawPile.group.iterator();
-        while(cards.hasNext())
-        {
-            AbstractCard card = (AbstractCard) cards.next();
-            card.triggerOnManualDiscard();
-            card.moveToDiscardPile();
+
+        int size = p.hand.size();
+        for(int i = 0; i < size; ++i) {
+            AbstractCard c = p.hand.getTopCard();
+            p.hand.moveToDiscardPile(c);
+            c.triggerOnManualDiscard();
+            GameActionManager.incrementDiscard(true);
         }
-        cards = p.discardPile.group.iterator();
-        while(cards.hasNext())
-        {
-            AbstractCard card = (AbstractCard) cards.next();
-            card.triggerOnManualDiscard();
+
+        size = p.drawPile.size();
+        for(int i = 0; i < size; ++i) {
+            AbstractCard c = p.drawPile.getTopCard();
+            p.drawPile.moveToDiscardPile(c);
+            c.triggerOnManualDiscard();
+            GameActionManager.incrementDiscard(true);
         }
-        cards = p.hand.group.iterator();
-        while(cards.hasNext())
-        {
-            AbstractCard card = (AbstractCard) cards.next();
-            card.triggerOnManualDiscard();
-            card.moveToDiscardPile();
+
+        if(upgraded) {
+            size = p.discardPile.size();
+            for (int i = 0; i < size; ++i) {
+                AbstractCard c = p.discardPile.getTopCard();
+                c.triggerOnManualDiscard();
+            }
         }
+
+
 
         this.isDone = true;
     }

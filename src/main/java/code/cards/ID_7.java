@@ -10,13 +10,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.Iterator;
 
 import static code.ModFile.makeID;
+import static code.util.Wiz.atb;
 
 public class ID_7 extends AbstractEasyCard {
     public final static String ID = makeID("ID_7");
     // intellij stuff SKILL, PLAYER, RARE, 0, 0, 0, 0, 0, 0
 
     public ID_7() {
-        super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
@@ -24,6 +25,8 @@ public class ID_7 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        atb(new Id7Action(true));
+        /*
         int size = p.discardPile.size();
         for(int i = 0; i < size; ++i) {
             AbstractCard c = p.discardPile.getTopCard();
@@ -45,9 +48,12 @@ public class ID_7 extends AbstractEasyCard {
             c.triggerOnManualDiscard();
             GameActionManager.incrementDiscard(true);
         }
+
+         */
     }
 
     public void upp() {
+        
     }
 }
 
