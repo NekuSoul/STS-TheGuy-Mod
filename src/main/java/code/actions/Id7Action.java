@@ -6,9 +6,12 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.actions.defect.ShuffleAllAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.Iterator;
 
 public class Id7Action extends AbstractGameAction {
     private boolean upgraded;
@@ -19,13 +22,25 @@ public class Id7Action extends AbstractGameAction {
 
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
-
-        if (upgraded) {
-            this.addToBot(new ShuffleAllAction());
-            this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
+        Iterator cards = p.drawPile.group.iterator();
+        while(cards.hasNext())
+        {
+            AbstractCard card = (AbstractCard) cards.next();
+            card.triggerOnManualDiscard();
+            card.moveToDiscardPile();
         }
-        else {
-            addToBot(new DiscardAction(p, AbstractDungeon.player, p.hand.size(), false));
+        cards = p.discardPile.group.iterator();
+        while(cards.hasNext())
+        {
+            AbstractCard card = (AbstractCard) cards.next();
+            card.triggerOnManualDiscard();
+        }
+        cards = p.hand.group.iterator();
+        while(cards.hasNext())
+        {
+            AbstractCard card = (AbstractCard) cards.next();
+            card.triggerOnManualDiscard();
+            card.moveToDiscardPile();
         }
 
         this.isDone = true;
