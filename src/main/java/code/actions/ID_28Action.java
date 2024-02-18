@@ -1,6 +1,7 @@
 package code.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ScrapeFollowUpAction;
@@ -42,15 +43,22 @@ public class ID_28Action extends AbstractGameAction {
                 AbstractCard tmpCard = p.hand.getBottomCard();
 
                 int cnt;
-                if(tmpCard.cost == -1)
+                if(tmpCard.costForTurn == -1)
                     cnt = EnergyPanel.getCurrentEnergy();
-                if(tmpCard.cost == -2)
+                if(tmpCard.costForTurn == -2 || tmpCard.costForTurn == 0)
                     cnt = 0;
                 else
                     cnt = tmpCard.costForTurn;
                 p.hand.moveToDiscardPile(tmpCard);
                 tmpCard.triggerOnManualDiscard();
+                GameActionManager.incrementDiscard(false);
+                AbstractDungeon.handCardSelectScreen.selectedCards.clear();
 
+                if(cnt == 0)
+                {
+                    isDone = true;
+                    return;
+                }
 
                 Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
@@ -82,12 +90,22 @@ public class ID_28Action extends AbstractGameAction {
                 AbstractCard tmpCard = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
 
                 int cnt;
-                if(tmpCard.cost == -1)
+                if(tmpCard.costForTurn == -1)
                     cnt = EnergyPanel.getCurrentEnergy();
+                if(tmpCard.costForTurn == -2 || tmpCard.costForTurn == 0)
+                    cnt = 0;
                 else
                     cnt = tmpCard.costForTurn;
                 p.hand.moveToDiscardPile(tmpCard);
                 tmpCard.triggerOnManualDiscard();
+                GameActionManager.incrementDiscard(false);
+                AbstractDungeon.handCardSelectScreen.selectedCards.clear();
+
+                if(cnt == 0)
+                {
+                    isDone = true;
+                    return;
+                }
 
                 Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 

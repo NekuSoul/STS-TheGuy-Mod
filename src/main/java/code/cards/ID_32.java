@@ -24,7 +24,7 @@ public class ID_32 extends AbstractEasyCard {
     // intellij stuff power, self, rare, 0, 0, 0, 0, 2, 0
 
     public ID_32() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 0;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 1;

@@ -29,7 +29,7 @@ public class Id7Action extends AbstractGameAction {
             AbstractCard c = p.hand.getTopCard();
             p.hand.moveToDiscardPile(c);
             c.triggerOnManualDiscard();
-            GameActionManager.incrementDiscard(true);
+            GameActionManager.incrementDiscard(false);
         }
 
         size = p.drawPile.size();
@@ -37,7 +37,7 @@ public class Id7Action extends AbstractGameAction {
             AbstractCard c = p.drawPile.getTopCard();
             p.drawPile.moveToDiscardPile(c);
             c.triggerOnManualDiscard();
-            GameActionManager.incrementDiscard(true);
+            GameActionManager.incrementDiscard(false);
         }
 
         if(upgraded) {
