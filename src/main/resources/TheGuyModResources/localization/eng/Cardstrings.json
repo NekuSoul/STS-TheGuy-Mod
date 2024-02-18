@@ -157,7 +157,7 @@
   },
   "${ModID}:ID_38": {
     "NAME": "Horrify",
-    "DESCRIPTION": "Whenever you deal damage this turn apply !M! Vulnerable to ALL enemies.}"
+    "DESCRIPTION": "Whenever you deal damage this turn apply !M! Vulnerable to ALL enemies."
   },
   "${ModID}:ID_39": {
     "NAME": "Countdown",
