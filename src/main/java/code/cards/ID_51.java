@@ -21,12 +21,12 @@ public class ID_51 extends AbstractEasyCard {
     }
     public void onRetained()
     {
-        magicNumber ++;
+        baseMagicNumber++;
     }
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         this.addToBot(new DiscardAction(p,p,3,false));
-        this.addToTop(new DrawCardAction(p, magicNumber));
+        this.addToTop(new DrawCardAction(p, baseMagicNumber));
     }
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m){

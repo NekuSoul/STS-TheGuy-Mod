@@ -17,12 +17,9 @@ import java.util.Iterator;
 public class ID_48Action extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
-    private AbstractCreature m;
 
-    public int amount;
-    public int damage;
-    public int magicNumber;
+
+
     public DamageInfo.DamageType damageTypeForTurn;
     public static int numDiscarded;
     private static final float DURATION;
@@ -34,12 +31,13 @@ public class ID_48Action extends AbstractGameAction {
     @Override
     public void update() {
         AbstractCard c;
+        AbstractPlayer p = AbstractDungeon.player;
         if (this.duration == DURATION) {
             if (p.hand.isEmpty()) {
                 this.isDone = true;
                 return;
             }
-            AbstractDungeon.handCardSelectScreen.open(TEXT[0], amount, true, true);
+            AbstractDungeon.handCardSelectScreen.open(TEXT[0], 99, true, true);
             tickDuration();
             return;
         }
@@ -48,11 +46,12 @@ public class ID_48Action extends AbstractGameAction {
             Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
             while (var4.hasNext()) {
                 c = (AbstractCard) var4.next();
-                this.p.hand.moveToDiscardPile(c);
+                p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
-                GameActionManager.incrementDiscard(true);
+                GameActionManager.incrementDiscard(false);
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            AbstractDungeon.handCardSelectScreen.selectedCards.clear();
             this.isDone = true;
         }
         this.tickDuration();

@@ -53,7 +53,7 @@ public class ID_7 extends AbstractEasyCard {
     }
 
     public void upp() {
-        
+
     }
 }
 

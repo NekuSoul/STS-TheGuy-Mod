@@ -23,14 +23,14 @@ public class ID_16 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        addToBot(new DiscardAction(p, p, 1+magicNumber, false));
+        addToBot(new DiscardAction(p, p, 2, false));
         this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
     }
 
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
-        //upgradeMagicNumber(0);
+        upgradeMagicNumber(1);
         //upgradeBaseCost(0);
     }
 }
