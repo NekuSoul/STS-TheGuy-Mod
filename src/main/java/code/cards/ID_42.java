@@ -51,6 +51,10 @@ public class ID_42 extends AbstractEasyCard {
     public void applyPowers()
     {
         baseDamage = AbstractDungeon.player.discardPile.size();
+        
+        if(upgraded)
+            baseDamage += 5;
+
         calculateCardDamage((AbstractMonster) null);
         super.applyPowers();
         this.initializeDescription();
