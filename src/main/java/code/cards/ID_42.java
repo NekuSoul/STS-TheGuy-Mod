@@ -27,14 +27,31 @@ public class ID_42 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyPowers();
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage+AbstractDungeon.player.discardPile.size(), this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.calculateCardDamage(m);
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         this.initializeDescription();
     }
 
-    public void applyPowers() {
-        setSecondDamage(this.damage+AbstractDungeon.player.discardPile.size(), 0);
+    @Override
+    public void calculateCardDamage(AbstractMonster mo)
+    {
+        if(mo != null)
+            applyPowers();
+        super.calculateCardDamage(mo);
+        baseSecondDamage = damage;
+        this.initializeDescription();
+    }
+    @Override
+    public void calculateDamageDisplay(AbstractMonster mo)
+    {
+        calculateCardDamage(mo);
+    }
+
+    public void applyPowers()
+    {
+        baseDamage = AbstractDungeon.player.discardPile.size();
+        calculateCardDamage((AbstractMonster) null);
         super.applyPowers();
         this.initializeDescription();
     }
