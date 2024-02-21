@@ -125,7 +125,7 @@
   },
   "${ModID}:ID_33": {
     "NAME": "Take Five",
-    "DESCRIPTION": "{@@}{The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 5 [E] next turn. Draw 5 cards next turn.|>0=Choose five times between five effects.}",
+    "DESCRIPTION": "{@@}The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 5 [E] next turn. Draw 5 cards next turn.|>0=Choose five times between five effects.}",
     "EXTENDED_DESCRIPTION": [
       "Strength",
       "Gain 5 Strength.",
