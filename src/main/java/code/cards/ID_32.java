@@ -40,7 +40,7 @@ public class ID_32 extends AbstractEasyCard {
             @Override
             public void onInitialApplication()
             {
-                atb(new DrawCardAction(magicNumber));
+                //atb(new DrawCardAction(magicNumber));
             }
             @Override
             public void onCardDraw(AbstractCard card) {
@@ -73,6 +73,7 @@ public class ID_32 extends AbstractEasyCard {
             }
         });
 
+        atb(new DrawCardAction(magicNumber));
 
     }
 

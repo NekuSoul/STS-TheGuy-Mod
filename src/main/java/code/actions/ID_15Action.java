@@ -43,7 +43,7 @@ public class ID_15Action extends AbstractGameAction {
     {
         AbstractCard c;
         if (this.duration == DURATION) {
-            if (AbstractDungeon.getMonsters().areMonstersBasicallyDead() || p.hand.isEmpty()) {
+            if (AbstractDungeon.getMonsters().areMonstersBasicallyDead() || p.hand.isEmpty() || amount < 1) {
                 this.isDone = true;
                 return;
             }

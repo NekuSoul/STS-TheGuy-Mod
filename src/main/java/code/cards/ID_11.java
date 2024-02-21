@@ -20,7 +20,7 @@ public class ID_11 extends AbstractEasyCard {
 
     public ID_11() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.NONE);
-        baseDamage = 3;
+        baseDamage = 4;
         baseBlock = 0;
         baseMagicNumber = magicNumber = 0;
     }
