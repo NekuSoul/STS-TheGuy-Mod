@@ -33,7 +33,7 @@
   },
   "${ModID}:ID_10": {
     "NAME": "Bare-knuckle Punch",
-    "DESCRIPTION": "Costs 1 less [E] for each card discarded this turn. Deal !D! damage."
+    "DESCRIPTION": "Costs 1 less [E] for each card discarded this turn. Deal !D! damage. Draw !M! cards."
   },
   "${ModID}:ID_11": {
     "NAME": "Crowd Cutter",
@@ -109,7 +109,7 @@
   },
   "${ModID}:ID_29": {
     "NAME": "Double",
-    "DESCRIPTION": "Select a card. Double every stat of the card."
+    "DESCRIPTION": "Select a card. Double {@@}{!Upgrades!|>0=double} every stat of the card."
   },
   "${ModID}:ID_30": {
     "NAME": "Headstart",
@@ -233,7 +233,7 @@
   },
   "${ModID}:ID_57": {
     "NAME": "Exhausting Punch",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times. Exhaust."
   },
   "${ModID}:ID_58": {
     "NAME": "X Punch",
@@ -245,7 +245,7 @@
   },
   "${ModID}:ID_60": {
     "NAME": "Power Punch",
-    "DESCRIPTION": "{@@}Punches cost 1 [E] less. {!Upgrades!|>0=Draw a card whenever you play a Punch.}"
+    "DESCRIPTION": "{@@}Punches cost 1 [E] less. {!Upgrades!|>0=Draw !M! card whenever you play a Punch.}"
   },
   "${ModID}:ID_61": {
     "NAME": "Pose",
