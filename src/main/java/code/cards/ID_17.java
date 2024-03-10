@@ -34,7 +34,7 @@ public class ID_17 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         this.addToTop(new ApplyPowerAction(p, p, new MarkPower(p, magicNumber)));
-        this.addToBot(new ID_17Action(p,m,damage,this.damageTypeForTurn));
+        this.addToBot(new ID_17Action(p,m,damage, DamageInfo.DamageType.NORMAL));
     }
 
     public void upp() {

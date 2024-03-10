@@ -20,7 +20,7 @@ import static code.ModFile.makeID;
 import static code.util.Wiz.applyToSelf;
 
 public class Relic_5 extends AbstractEasyRelic{
-    public static final String ID = makeID("Relic_4");
+    public static final String ID = makeID("Relic_5");
 
     public Relic_5() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);

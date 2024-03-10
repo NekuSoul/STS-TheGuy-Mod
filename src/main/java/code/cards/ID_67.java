@@ -2,9 +2,17 @@ package code.cards;
 
 import code.actions.ID_67Action;
 import code.cards.AbstractEasyCard;
+import code.powers.LambdaPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static code.ModFile.makeID;
 import static code.util.Wiz.*;
@@ -23,6 +31,19 @@ public class ID_67 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         atb(new ID_67Action(m,new DamageInfo(p,damage),magicNumber));
+        applyToEnemy(m, new LambdaPower(makeID("ID_67_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
+
+
+            @Override
+            public void onDeath() {
+                atb(new DamageAllEnemiesAction(AbstractDungeon.player,amount, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+            }
+            @Override
+            public void updateDescription() {
+                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
+            }
+        });
+
     }
 
     public void upp() {
