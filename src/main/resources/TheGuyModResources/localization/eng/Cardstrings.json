@@ -17,7 +17,7 @@
   },
   "${ModID}:ID_6": {
     "NAME": "Recoup",
-    "DESCRIPTION": "Add 1 Sneak Up with Exhaust to your hand for every card you discarded this turn."
+    "DESCRIPTION": "Add 1 *Sneak *Up with Exhaust to your hand for every card you discarded this turn."
   },
   "${ModID}:ID_7": {
     "NAME": "Grand Cleanse",
@@ -49,7 +49,7 @@
   },
   "${ModID}:ID_14": {
     "NAME": "Stay Alert",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Block X times next turn."
+    "DESCRIPTION": "Gain !B! Block. Gain !B! Block X times next turn."
   },
   "${ModID}:ID_15": {
     "NAME": "Hissy Fit",
@@ -109,7 +109,7 @@
   },
   "${ModID}:ID_29": {
     "NAME": "Double",
-    "DESCRIPTION": "{@@}Select a card. Double every stat of the card.{!Upgrades!|>0= Double every stat of the card.} "
+    "DESCRIPTION": "{@@}Select a card. NL Double every stat of the card.{!Upgrades!|>0= NL Double every stat of the card.} "
   },
   "${ModID}:ID_30": {
     "NAME": "Headstart",
@@ -125,7 +125,7 @@
   },
   "${ModID}:ID_33": {
     "NAME": "Take Five",
-    "DESCRIPTION": "{@@}The next {!Upgrades!|@=Gain 5 Strength. Gain 5 Dexterity. Gain 5 Mark. Gain 5 [E] next turn. Draw 5 cards next turn.|>0=Choose five times between five effects.}",
+    "DESCRIPTION": "{@@}{!Upgrades!|@=Gain 5 Strength. NL Gain 5 Dexterity. NL Gain 5 Mark. NL Gain 5 [E] next turn. NL Draw 5 cards next turn.|>0=Choose five times between five effects.}",
     "EXTENDED_DESCRIPTION": [
       "Strength",
       "Gain 5 Strength.",
@@ -289,7 +289,7 @@
   },
   "${ModID}:ID_71": {
     "NAME": "Sacrificial Pawn",
-    "DESCRIPTION": "{@@}{The next {!Upgrades!|@=card that gets discarded returns to your hand.|>0=two cards that get discarded return to your hand.}"
+    "DESCRIPTION": "{@@}The next {!Upgrades!|@=card that gets discarded returns to your hand.|>0=two cards that get discarded return to your hand.}"
   },
   "${ModID}:ID_72": {
     "NAME": "Second Hand",
