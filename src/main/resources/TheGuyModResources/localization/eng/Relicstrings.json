@@ -40,5 +40,33 @@
     "DESCRIPTIONS": [
       "Has no effect."
     ]
+  },
+  "${ModID}:Relic_7": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_8": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_9": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:Relic_10": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
   }
 }
