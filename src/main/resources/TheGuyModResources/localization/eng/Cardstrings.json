@@ -109,7 +109,7 @@
   },
   "${ModID}:ID_29": {
     "NAME": "Double",
-    "DESCRIPTION": "{@@}Select a card. NL Double every stat of the card.{!Upgrades!|>0= NL Double every stat of the card.} "
+    "DESCRIPTION": "{@@}Select a card. NL Double every stat of the card.{!Upgrades!|>0= NL Double every stat of the card.} NL Exhaust."
   },
   "${ModID}:ID_30": {
     "NAME": "Headstart",
