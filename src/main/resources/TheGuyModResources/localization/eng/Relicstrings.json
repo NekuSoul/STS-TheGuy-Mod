@@ -1,58 +1,58 @@
 {
   "${ModID}:TodoItem": {
-    "NAME": "NCreate 1 Bargain at start of combat",
-    "FLAVOR": "FCreate 1 Bargain at start of combat",
+    "NAME": "Countertop",
+    "FLAVOR": "Make professional deals everywhere!",
     "DESCRIPTIONS": [
-      "DCreate 1 Bargain at start of combat"
+      "Create 1 Bargain at the start of combat."
     ]
   },
   "${ModID}:Relic_2": {
-    "NAME": "X cards get upgraded when picked up",
-    "FLAVOR": "X cards get upgraded when picked up",
+    "NAME": "Dragon Egg",
+    "FLAVOR": "An ancient dragon egg. Or maybe just a chicken egg. Who knows?",
     "DESCRIPTIONS": [
-      "X cards get upgraded when picked up"
+      "X cards get upgraded when picked up."
     ]
   },
   "${ModID}:Relic_3": {
-    "NAME": "Gain 3 gold everytime you play a Bargain (12g max per combat)",
-    "FLAVOR": "Gain 3 gold everytime you play a Bargain (12g max per combat)",
+    "NAME": "Reward Coupon",
+    "FLAVOR": "Definitely not a tax evasion scheme.",
     "DESCRIPTIONS": [
-      "Gain 3 gold everytime you play a Bargain (12g max per combat)"
+      "Gain 3 gold everytime you play a Bargain, up to 4 times per combat."
     ]
   },
   "${ModID}:Relic_4": {
-    "NAME": "At the end of your turn if your hand is empty gain 1 Energy next turn",
-    "FLAVOR": "At the end of your turn if your hand is empty gain 1 Energy next turn",
+    "NAME": "Comfy Cushion",
+    "FLAVOR": "No machine washing allowed to improve meditative qualities.",
     "DESCRIPTIONS": [
-      "At the end of your turn if your hand is empty gain 1 Energy next turn"
+      "At the end of your turn, if your hand is empty gain 1 [E] next turn"
     ]
   },
   "${ModID}:Relic_5": {
-    "NAME": "Gain 1 mark at Start of Turn",
-    "FLAVOR": "Gain 1 mark at Start of Turn",
+    "NAME": "Scope",
+    "FLAVOR": "Contains a fisheye lens for some reason.",
     "DESCRIPTIONS": [
       "Gain 1 mark at Start of Turn"
     ]
   },
   "${ModID}:Relic_6": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "Blueprint",
+    "FLAVOR": "The fastest way to a good idea is to just copy one from someone else.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Create a copy of a Relic you already own."
     ]
   },
   "${ModID}:Relic_7": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "Pocket Firepit",
+    "FLAVOR": "Keep yourself warm at the expense of your pockets.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "The first played card every turn is exhausted."
     ]
   },
   "${ModID}:Relic_8": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "Bottled Smoke",
+    "FLAVOR": "The perfect flavor for people who think BBQ-Sauce isn't smokey enough.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Upon pickup, choose a X card. That card gains exhaust."
     ]
   },
   "${ModID}:Relic_9": {
@@ -63,10 +63,10 @@
     ]
   },
   "${ModID}:Relic_10": {
-    "NAME": "Todo Item",
+    "NAME": "Megaphone",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Once per turn, when you run out of [E], gain a Bargain."
     ]
   }
 }
