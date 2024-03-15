@@ -289,7 +289,7 @@
   },
   "${ModID}:ID_71": {
     "NAME": "Sacrificial Pawn",
-    "DESCRIPTION": "{@@}The next {!Upgrades!|@=card that gets discarded returns to your hand.|>0=two cards that get discarded return to your hand.}"
+    "DESCRIPTION": "{@@}The next !M! card{!M!|>1=s} that gets discarded return to your hand."
   },
   "${ModID}:ID_72": {
     "NAME": "Second Hand",
