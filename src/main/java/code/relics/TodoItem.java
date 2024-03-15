@@ -16,12 +16,7 @@ public class TodoItem extends AbstractEasyRelic {
     public void atBattleStart() {
         AbstractDungeon.player.hand.addToHand(new ID_80());
         this.flash();
-    }
-
-    @Override
-    public void onManualDiscard() {
-        AbstractPlayer p = AbstractDungeon.player;
-        this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 1), 1));
+        this.usedUp();
     }
 
     public TodoItem() {
