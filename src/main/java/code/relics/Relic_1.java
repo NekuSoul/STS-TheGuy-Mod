@@ -2,15 +2,12 @@ package code.relics;
 
 import code.CharacterFile;
 import code.cards.ID_80;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
 import static code.ModFile.makeID;
 
-public class TodoItem extends AbstractEasyRelic {
-    public static final String ID = makeID("TodoItem");
+public class Relic_1 extends AbstractEasyRelic {
+    public static final String ID = makeID("Relic_1");
 
     @Override
     public void atBattleStart() {
@@ -19,7 +16,7 @@ public class TodoItem extends AbstractEasyRelic {
         this.usedUp();
     }
 
-    public TodoItem() {
+    public Relic_1() {
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
 
     }

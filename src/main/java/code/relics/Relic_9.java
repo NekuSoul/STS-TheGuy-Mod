@@ -59,7 +59,7 @@ public class Relic_9 extends AbstractEasyRelic {
 
     @Override
     public boolean canSpawn() {
-       return AbstractDungeon.player.hasRelic(makeID("TodoItem"));
+       return AbstractDungeon.player.hasRelic(makeID("Relic_1"));
     }
 
     @Override

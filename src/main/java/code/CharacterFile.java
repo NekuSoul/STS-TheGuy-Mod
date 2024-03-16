@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import code.cards.ID_1;
 import code.cards.ID_2;
-import code.relics.TodoItem;
+import code.relics.Relic_1;
 
 import java.util.ArrayList;
 
@@ -72,7 +72,7 @@ public class CharacterFile extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(TodoItem.ID);
+        retVal.add(Relic_1.ID);
         return retVal;
     }
 
