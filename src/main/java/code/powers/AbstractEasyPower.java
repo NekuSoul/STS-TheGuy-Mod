@@ -7,24 +7,30 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import code.ModFile;
 import code.util.TexLoader;
 
 public abstract class AbstractEasyPower extends AbstractPower implements OnManualDiscardSubscriber, OnRefreshHandSubscriber {
+    private final PowerStrings powerStrings;
     public int amount2 = -1;
     public boolean isTwoAmount = false;
     public static Color redColor2 = Color.RED.cpy();
     public static Color greenColor2 = Color.GREEN.cpy();
     public boolean canGoNegative2 = false;
 
-    public AbstractEasyPower(String ID, String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
+    public AbstractEasyPower(String ID, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
         this.ID = ID;
+        this.powerStrings = CardCrawlGame.languagePack.getPowerStrings(this.ID);
         this.isTurnBased = isTurnBased;
 
-        this.name = NAME;
+        this.name = powerStrings.NAME;
+        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
         this.owner = owner;
         this.amount = amount;
@@ -43,6 +49,11 @@ public abstract class AbstractEasyPower extends AbstractPower implements OnManua
 
         updateDescription();
     }
+
+    @Override
+    public void updateDescription(){
+        description=DESCRIPTIONS[0];
+    };
 
     public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
         super.renderAmount(sb, x, y, c);

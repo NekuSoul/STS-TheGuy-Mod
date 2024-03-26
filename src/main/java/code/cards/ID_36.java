@@ -38,7 +38,7 @@ public class ID_36 extends AbstractEasyCard {
     {
         AbstractPlayer p = AbstractDungeon.player;
 
-        applyToSelf(new LambdaPower(makeID("ID_36_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount) {
+        applyToSelf(new LambdaPower(makeID("ID_36_Power"), AbstractPower.PowerType.BUFF, false, p, amount) {
 
             @Override
             public void onManualDiscard()
@@ -51,15 +51,6 @@ public class ID_36 extends AbstractEasyCard {
                 }
                 if(amount == 0)
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_36_Power")));
-            }
-            @Override
-            public void updateDescription() {
-                if(magicNumber == 0) {
-                    description = "1";
-                }
-                else {
-                    description = "2";
-                }
             }
         });
 

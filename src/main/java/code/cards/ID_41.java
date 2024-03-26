@@ -37,16 +37,12 @@ public class ID_41 extends AbstractEasyCard {
         atb(new DrawCardAction(magicNumber));
         this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
 
-        applyToSelf(new LambdaPower(makeID("ID_41_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, 1) {
+        applyToSelf(new LambdaPower(makeID("ID_41_Power"), AbstractPower.PowerType.BUFF, false, p, 1) {
 
             @Override
             public void atStartOfTurn() {
                 atb(new LoseEnergyAction(amount));
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_41_Power")));
-            }
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

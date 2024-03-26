@@ -43,7 +43,7 @@ public class ID_74 extends AbstractEasyCard {
         atb(new DrawCardAction(amount));
 
 
-        applyToSelf(new LambdaPower(makeID("ID_74_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, true, p, amount) {
+        applyToSelf(new LambdaPower(makeID("ID_74_Power"), AbstractPower.PowerType.DEBUFF, true, p, amount) {
             @Override
             public void atEndOfTurn(boolean isPlayer)
             {
@@ -57,10 +57,6 @@ public class ID_74 extends AbstractEasyCard {
                 }
             }
 
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
-            }
         });
 
 

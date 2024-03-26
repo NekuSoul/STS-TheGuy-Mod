@@ -26,18 +26,13 @@ public class ID_26 extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_26_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_26_Power"), AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
 
             @Override
             public void onManualDiscard()
             {
                 this.flash();
                 this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
-            }
-
-            @Override
-            public void updateDescription() {
-
             }
 
             @Override

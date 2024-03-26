@@ -32,7 +32,7 @@ public class ID_25 extends AbstractEasyCard {
     {
         upgraded = this.upgraded;
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        applyToSelf(new LambdaPower(makeID("ID_25_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_25_Power"), AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
 
             @Override
             public void atStartOfTurnPostDraw()
@@ -46,15 +46,6 @@ public class ID_25 extends AbstractEasyCard {
                 }
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_25_Power")));
 
-            }
-            @Override
-            public void updateDescription() {
-                if(magicNumber == 0) {
-                    description = "1";
-                }
-                else {
-                    description = "2";
-                }
             }
         });
     }

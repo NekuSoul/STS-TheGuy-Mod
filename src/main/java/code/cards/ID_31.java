@@ -27,12 +27,7 @@ public class ID_31 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_31_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
-
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
-            }
+        applyToSelf(new LambdaPower(makeID("ID_31_Power"), AbstractPower.PowerType.BUFF, false, p, magicNumber) {
         });
     }
 

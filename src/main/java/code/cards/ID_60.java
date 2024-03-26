@@ -34,7 +34,7 @@ public class ID_60 extends AbstractEasyCard {
         atb(new ID_60Action());
 
         if(!upgraded) return;
-        applyToSelf(new LambdaPower(makeID("ID_60_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_60_Power"), AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -42,10 +42,6 @@ public class ID_60 extends AbstractEasyCard {
                 {
                     atb(new DrawCardAction(amount));
                 }
-            }
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

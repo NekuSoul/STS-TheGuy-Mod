@@ -27,7 +27,7 @@ public class ID_18 extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LambdaPower(makeID("ID_18_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_18_Power"), AbstractPower.PowerType.BUFF, false, p, magicNumber) {
             @Override
             public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source)
             {
@@ -35,11 +35,6 @@ public class ID_18 extends AbstractEasyCard {
                 if(power.ID != "PathToVictoryPower") return;
 
                 this.addToBot(new DamageAllEnemiesAction(p, amount , DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            }
-
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

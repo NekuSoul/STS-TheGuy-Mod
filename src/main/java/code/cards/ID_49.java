@@ -28,17 +28,13 @@ public class ID_49 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_49_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_49_Power"), AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void onManualDiscard()
             {
                 AbstractCard card = p.discardPile.getTopCard();
                 card.modifyCostForCombat(-amount);
-            }
-            @Override
-            public void updateDescription() {
-                description = "2";
             }
         });
     }

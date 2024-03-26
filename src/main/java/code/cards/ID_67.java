@@ -31,16 +31,12 @@ public class ID_67 extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         atb(new ID_67Action(m,new DamageInfo(p,damage),magicNumber));
-        applyToEnemy(m, new LambdaPower(makeID("ID_67_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
+        applyToEnemy(m, new LambdaPower(makeID("ID_67_Power"), AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
 
 
             @Override
             public void onDeath() {
                 atb(new DamageAllEnemiesAction(AbstractDungeon.player,amount, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
-            }
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
 

@@ -26,10 +26,10 @@ public class ID_30 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_30_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_30_Power"), AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
             public void atStartOfTurn() {
-                    applyToSelf(new LambdaPower(makeID("ID_30_Power_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+                    applyToSelf(new LambdaPower(makeID("ID_30_Power_Power"), AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
                         @Override
                         public void onPlayCard(AbstractCard card, AbstractMonster m)
@@ -47,19 +47,10 @@ public class ID_30 extends AbstractEasyCard {
                             if(isPlayer)
                                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_30_Power_Power")));
                         }
-                        @Override
-                        public void updateDescription() {
-                            description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
-                        }
-
 
                     });
                 }
 
-                @Override
-                public void updateDescription() {
-                    description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
-                }
             });
     }
 

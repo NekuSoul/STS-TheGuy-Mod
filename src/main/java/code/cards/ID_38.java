@@ -33,7 +33,7 @@ public class ID_38 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_38_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_38_Power"), AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
             @Override
             public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target)
@@ -52,11 +52,6 @@ public class ID_38 extends AbstractEasyCard {
             {
                 if(!isPlayer) return;
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_38_Power")));
-            }
-
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

@@ -23,7 +23,7 @@ public class ID_53 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_53_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_53_Power"), AbstractPower.PowerType.BUFF, true, p, magicNumber) {
 
             @Override
             public void atStartOfTurn() {
@@ -37,11 +37,6 @@ public class ID_53 extends AbstractEasyCard {
             @Override
             public void onRemove() {
                 AbstractDungeon.player.gameHandSize += amount;
-            }
-
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

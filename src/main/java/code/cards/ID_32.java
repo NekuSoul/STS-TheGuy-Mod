@@ -35,7 +35,7 @@ public class ID_32 extends AbstractEasyCard {
         this.addToBot(new TalkAction(true, "Birds are not real", 1.0F, 2.0F));
 
 
-        applyToSelf(new LambdaPower(makeID("ID_32_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, true, p, 2) {
+        applyToSelf(new LambdaPower(makeID("ID_32_Power"), AbstractPower.PowerType.BUFF, true, p, 2) {
 
             @Override
             public void onInitialApplication()
@@ -67,10 +67,6 @@ public class ID_32 extends AbstractEasyCard {
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_32_Power")));
             }
 
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
-            }
         });
 
         atb(new DrawCardAction(magicNumber));

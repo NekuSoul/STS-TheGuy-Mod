@@ -28,17 +28,13 @@ public class ID_52 extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        applyToSelf(new LambdaPower(makeID("ID_52_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, magicNumber) {
+        applyToSelf(new LambdaPower(makeID("ID_52_Power"), AbstractPower.PowerType.BUFF, false, p, magicNumber) {
 
             @Override
             public void onUseCard(AbstractCard card, UseCardAction action)
             {
                 if(card.cost != -1) return;
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID("ID_52_Power")));
-            }
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
     }

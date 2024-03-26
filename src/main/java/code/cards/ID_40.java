@@ -37,7 +37,7 @@ public class ID_40 extends AbstractEasyCard {
         if(amount < 1) return true;
         AbstractPlayer p = AbstractDungeon.player;
 
-        applyToSelf(new LambdaPower(makeID("ID_40_Power"), "cardStrings.EXTENDED_DESCRIPTION[0]", AbstractPower.PowerType.BUFF, false, p, amount) {
+        applyToSelf(new LambdaPower(makeID("ID_40_Power"), AbstractPower.PowerType.BUFF, false, p, amount) {
 
             @Override
             public void onPlayCard(AbstractCard card, AbstractMonster m)
@@ -57,10 +57,6 @@ public class ID_40 extends AbstractEasyCard {
                     this.addToBot(new MakeTempCardInDiscardAction(newCard, 1));
                 }
                 card.cost = 0;
-            }
-            @Override
-            public void updateDescription() {
-                description = ""; // cardStrings.EXTENDED_DESCRIPTION[1] + amount + cardStrings.EXTENDED_DESCRIPTION[2] + amount + cardStrings.EXTENDED_DESCRIPTION[3];
             }
         });
 
