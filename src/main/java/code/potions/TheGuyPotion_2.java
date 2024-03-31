@@ -43,7 +43,7 @@ public class TheGuyPotion_2 extends AbstractEasyPotion {
     }
 
     public String getDescription() {
-        return "strings.DESCRIPTIONS[0]" + potency + "strings.DESCRIPTIONS[1]";
+        return strings.DESCRIPTIONS[0] + potency + strings.DESCRIPTIONS[1];
     }
 
     public void addAdditionalTips() {
