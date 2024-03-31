@@ -23,7 +23,7 @@ public class TheGuyPotion_2 extends AbstractEasyPotion {
     public static String ID = makeID("TheGuyPotion_2");
 
     public TheGuyPotion_2() {
-        super(ID, PotionRarity.COMMON, PotionSize.MOON, new Color(0.2f, 0.4f, 0.9f, 1f), new Color(0.6f, 0.8f, 1.0f, 1f), null, CharacterFile.Enums.THE_GUY, ModFile.characterColor);
+        super(ID, PotionRarity.COMMON, PotionSize.BOTTLE, Color.BLUE, Color.BLUE, Color.WHITE, CharacterFile.Enums.THE_GUY, ModFile.characterColor);
     }
 
     public int getPotency(int ascensionlevel) {
