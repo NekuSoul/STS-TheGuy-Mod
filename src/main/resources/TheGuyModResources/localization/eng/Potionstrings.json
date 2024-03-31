@@ -1,9 +1,16 @@
 {
-    "${ModID}:DemoPotion": {
-        "NAME": "Awesome Demo Potion",
+    "${ModID}:TheGuyPotion_1": {
+        "NAME": "Pu'er",
         "DESCRIPTIONS": [
             "Gain #b",
-            " #yStrength."
+            " Bargain."
+        ]
+    },
+    "${ModID}:TheGuyPotion_2": {
+        "NAME": "Sparkling Water",
+        "DESCRIPTIONS": [
+            "When you play cost X cards this turn, their effects are increased by #b",
+            "."
         ]
     }
 }

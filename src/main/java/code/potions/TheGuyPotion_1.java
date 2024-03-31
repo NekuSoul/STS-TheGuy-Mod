@@ -17,7 +17,7 @@ public class TheGuyPotion_1 extends AbstractEasyPotion {
     public static String ID = makeID("TheGuyPotion_1");
 
     public TheGuyPotion_1() {
-        super(ID, PotionRarity.UNCOMMON, PotionSize.ANVIL, new Color(0.2f, 0.4f, 0.9f, 1f), new Color(0.6f, 0.8f, 1.0f, 1f), null, CharacterFile.Enums.THE_GUY, ModFile.characterColor);
+        super(ID, PotionRarity.UNCOMMON, PotionSize.SPHERE, Color.FIREBRICK, Color.BLACK, null, CharacterFile.Enums.THE_GUY, ModFile.characterColor);
     }
 
     public int getPotency(int ascensionlevel) {
@@ -29,7 +29,7 @@ public class TheGuyPotion_1 extends AbstractEasyPotion {
     }
 
     public String getDescription() {
-        return "strings.DESCRIPTIONS[0]" + potency + "strings.DESCRIPTIONS[1]";
+        return strings.DESCRIPTIONS[0] + potency + strings.DESCRIPTIONS[1];
     }
 
     public void addAdditionalTips() {
