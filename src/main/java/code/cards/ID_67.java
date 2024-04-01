@@ -25,13 +25,13 @@ public class ID_67 extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
         baseBlock = 0;
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         atb(new ID_67Action(m,new DamageInfo(p,damage),magicNumber));
-        applyToEnemy(m, new LambdaPower(makeID("ID_67_Power"), AbstractPower.PowerType.DEBUFF, false, p, magicNumber) {
+        applyToEnemy(m, new LambdaPower(makeID("ID_67_Power"), AbstractPower.PowerType.DEBUFF, false, p, damage) {
 
 
             @Override
@@ -45,7 +45,7 @@ public class ID_67 extends AbstractEasyCard {
     public void upp() {
         upgradeDamage(3);
         //upgradeBlock(0);
-        upgradeMagicNumber(6);
+        //upgradeMagicNumber(6);
         //upgradeBaseCost(1);
     }
 }

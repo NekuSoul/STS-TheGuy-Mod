@@ -21,34 +21,43 @@ public class ID_60Action extends AbstractGameAction {
             Iterator cards = p.hand.group.iterator();
             while (cards.hasNext()) {
                 AbstractCard card = (AbstractCard) cards.next();
-                if (card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY) && card.cost > 0) {
-                    if(card.costForTurn > 0)
+                if (card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY)) {
+                    if(card.costForTurn > 0) {
                         card.costForTurn -= 1;
-                    card.isCostModifiedForTurn = true;
-                    card.cost -= 1;
-                    card.isCostModified = true;
+                        card.isCostModifiedForTurn = true;
+                    }
+                    if(card.cost > 0) {
+                        card.cost -= 1;
+                        card.isCostModified = true;
+                    }
                 }
             }
             cards = p.discardPile.group.iterator();
             while (cards.hasNext()) {
                 AbstractCard card = (AbstractCard) cards.next();
-                if (card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY) && card.cost > 0) {
-                    if(card.costForTurn > 0)
+                if (card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY)) {
+                    if(card.costForTurn > 0) {
                         card.costForTurn -= 1;
-                    card.isCostModifiedForTurn = true;
-                    card.cost -= 1;
-                    card.isCostModified = true;
+                        card.isCostModifiedForTurn = true;
+                    }
+                    if(card.cost > 0) {
+                        card.cost -= 1;
+                        card.isCostModified = true;
+                    }
                 }
             }
             cards = p.drawPile.group.iterator();
             while (cards.hasNext()) {
                 AbstractCard card = (AbstractCard) cards.next();
-                if (card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY) && card.cost > 0) {
-                    if(card.costForTurn > 0)
+                if (card.hasTag(CharacterFile.THEGUY_TAGS.Punch_THE_GUY)) {
+                    if(card.costForTurn > 0) {
                         card.costForTurn -= 1;
-                    card.isCostModifiedForTurn = true;
-                    card.cost -= 1;
-                    card.isCostModified = true;
+                        card.isCostModifiedForTurn = true;
+                    }
+                    if(card.cost > 0) {
+                        card.cost -= 1;
+                        card.isCostModified = true;
+                    }
                 }
             }
         }
