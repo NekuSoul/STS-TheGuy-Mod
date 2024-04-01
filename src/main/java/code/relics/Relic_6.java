@@ -62,7 +62,7 @@ public class Relic_6 extends AbstractEasyRelic{
             AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(rndRelic));
 
             AbstractDungeon.combatRewardScreen.positionRewards();
-            AbstractDungeon.overlayMenu.proceedButton.setLabel("this is a const on the Relic");
+            //AbstractDungeon.overlayMenu.proceedButton.setLabel("this is a const on the Relic");
             this.cardsReceived = true;
             AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
         }
