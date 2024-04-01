@@ -20,11 +20,6 @@ public class Relic_10 extends AbstractEasyRelic {
     public boolean canTrigger = false;
     public static final String ID = makeID("Relic_10");
 
-    @Override
-    public void onManualDiscard() {
-        AbstractPlayer p = AbstractDungeon.player;
-        this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 1), 1));
-    }
 
     public Relic_10() {
         super(ID, RelicTier.BOSS, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
