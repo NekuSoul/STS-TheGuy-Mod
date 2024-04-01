@@ -4,9 +4,9 @@
     <groupId>UnimportantInfo</groupId>
 
     <artifactId>TheGuyMod</artifactId>
-    <version>0.0.1</version>
-    <name>The guy mode</name>
-    <description>it does have the guy in it</description>
+    <version>1.0.0</version>
+    <name>The Guy Mod</name>
+    <description>It does have the guy in it.</description>
     <!-- Change the above for mod information. -->
 
     <properties>
