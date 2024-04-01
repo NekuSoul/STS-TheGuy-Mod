@@ -31,7 +31,7 @@ public class Relic_7 extends AbstractEasyRelic{
     public static final String ID = makeID("Relic_7");
 
     public Relic_7() {
-        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
+        super(ID, RelicTier.SHOP, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
     }
 
     public String getUpdatedDescription() {

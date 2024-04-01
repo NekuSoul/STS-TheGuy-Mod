@@ -20,7 +20,7 @@ public class Relic_3 extends AbstractEasyRelic{
 
     int gainedgold = 0;
     public Relic_3() {
-        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
+        super(ID, RelicTier.COMMON, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
 
     }
 

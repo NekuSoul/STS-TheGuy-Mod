@@ -22,7 +22,7 @@ public class Relic_10 extends AbstractEasyRelic {
 
 
     public Relic_10() {
-        super(ID, RelicTier.BOSS, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
+        super(ID, RelicTier.RARE, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
     }
 
     public void atTurnStart() {

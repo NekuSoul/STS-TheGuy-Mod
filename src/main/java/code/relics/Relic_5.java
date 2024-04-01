@@ -23,7 +23,7 @@ public class Relic_5 extends AbstractEasyRelic{
     public static final String ID = makeID("Relic_5");
 
     public Relic_5() {
-        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
+        super(ID, RelicTier.Common, LandingSound.FLAT, CharacterFile.Enums.THE_GUY_COLOR);
 
     }
 
@@ -39,7 +39,7 @@ public class Relic_5 extends AbstractEasyRelic{
 
     @Override
     public boolean canSpawn() {
-        return Settings.isEndless || AbstractDungeon.floorNum <= 48;
+        return true;
     }
 
     @Override
