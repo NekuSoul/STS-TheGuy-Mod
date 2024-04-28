@@ -56,17 +56,17 @@
     ]
   },
   "${ModID}:Relic_9": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "NAME": "Return package",
+    "FLAVOR": "The merchant finally opened an online shop.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Whenever you discard a card draw an additional card at the start of next turn."
     ]
   },
   "${ModID}:Relic_10": {
     "NAME": "Megaphone",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "The louder you scream, the better the deals.",
     "DESCRIPTIONS": [
-      "Once per turn, when you run out of [E] , gain a Bargain."
+      "Once per turn, when you run out of [E], gain a Bargain."
     ]
   }
 }
