@@ -32,15 +32,10 @@ public class ID_66 extends AbstractEasyCard {
         atb(new ID_66Action(m));
     }
 
-    @Override
-    public boolean canUpgrade()
-    {
-        return false;
-    }
     public void upp() {
         //upgradeDamage(0);
         //upgradeBlock(0);
         //upgradeMagicNumber(1);
-        //upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }
