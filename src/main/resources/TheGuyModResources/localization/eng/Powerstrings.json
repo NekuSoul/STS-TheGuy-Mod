@@ -2,133 +2,133 @@
   "${ModID}:ID_18_Power": {
     "NAME": "Collateral Damage",
     "DESCRIPTIONS": [
-      "Whenever you gain Mark deal #b to ALL enemies."
+      "Whenever you gain Mark deal X to ALL enemies."
     ]
   },
   "${ModID}:ID_25_Power": {
     "NAME": "Desperate Strike",
     "DESCRIPTIONS": [
-      "Discard #b card at random at the Start of next Turn."
+      "Discard X cards at random at the Start of next Turn."
     ]
   },
   "${ModID}:ID_26_Power": {
     "NAME": "Insurance",
     "DESCRIPTIONS": [
-      "Whenever you draw or discard a card this turn gain #b Block."
+      "Whenever you draw or discard a card this turn gain X Block."
     ]
   },
   "${ModID}:ID_27_Power": {
     "NAME": "Caffeine",
     "DESCRIPTIONS": [
-      "Whenever you have no cards in hand during your turn, draw #b card."
+      "Whenever you have no cards in hand during your turn, draw X cards."
     ]
   },
   "${ModID}:ID_30_Power": {
     "NAME": "Headstart",
     "DESCRIPTIONS": [
-      "{@@}At the start of your turn, the first #b cost X card{#b|>0=s} do{#b|<1=es}n't consume energy."
+      "{@@}At the start of your turn, the first X cost X card{X|>0=s} do{X|<1=es}n't consume energy."
     ]
   },
   "${ModID}:ID_31_Power": {
     "NAME": "Raising Bars",
     "DESCRIPTIONS": [
-      "The effect of cost X cards will always be at least #b."
+      "The effect of cost X cards will always be at least X."
     ]
   },
   "${ModID}:ID_32_Power": {
     "NAME": "Conspiracy Theory",
     "DESCRIPTIONS": [
-      "You are confused for the next #b turns."
+      "You are confused for the next X turns."
     ]
   },
   "${ModID}:ID_36_Power": {
     "NAME": "Stay Sharp",
     "DESCRIPTIONS": [
-      "When the next #b cards are discarded, play the top card of your discard pile."
+      "When the next X cards are discarded, play the top card of your discard pile."
     ]
   },
   "${ModID}:ID_38_Power": {
     "NAME": "Horrify",
     "DESCRIPTIONS": [
-      "Whenever you deal damage this turn apply #b Vulnerable to every enemy."
+      "Whenever you deal damage this turn apply X Vulnerable to every enemy."
     ]
   },
   "${ModID}:ID_39_Power": {
     "NAME": "Countdown",
     "DESCRIPTIONS": [
-      "{@@}After #b {#b|>1=cards are discarded|card is discarded} deal 10 damage to ALL enemies."
+      "{@@}After X {X|>1=cards are discarded|card is discarded} deal 10 damage to ALL enemies."
     ]
   },
   "${ModID}:ID_40_Power": {
     "NAME": "Anger Form",
     "DESCRIPTIONS": [
-      "{@@}Whenever an attack is played put #b copies of it into your discard pile."
+      "{@@}Whenever an attack is played put X copies of it into your discard pile."
     ]
   },
   "${ModID}:ID_41_Power": {
     "NAME": "Fundraiser",
     "DESCRIPTIONS": [
-      "{@@}When this card is drawn exhaust it and draw #b card{#b|>1=s}. Lose #b [E] at the start of next turn."
+      "{@@}When this card is drawn exhaust it and draw X card{X|>1=s}. Lose X [E] at the start of next turn."
     ]
   },
   "${ModID}:ID_45_Power": {
     "NAME": "Choo-Choo Mail",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b Mark."
+      "At the start of your turn, gain X Mark."
     ]
   },
   "${ModID}:ID_49_Power": {
     "NAME": "Compost Heap",
     "DESCRIPTIONS": [
-      "{@@}After a card has been discarded reduce the cost of the top card of of your discard pile {!#b!|@=by #b|>0=to 0} [E]."
+      "{@@}After a card has been discarded reduce the cost of the top card of of your discard pile {!X!|@=by X|>0=to 0} [E]."
     ]
   },
   "${ModID}:ID_52_Power": {
     "NAME": "Improve Potency",
     "DESCRIPTIONS": [
-      "When you play the next cost X card, its effects are increased by #b."
+      "When you play the next cost X card, its effects are increased by X."
     ]
   },
   "${ModID}:ID_53_Power": {
     "NAME": "Hyperfocus",
     "DESCRIPTIONS": [
-      "{@@}Gain #b [E] at the start of your turn. Draw #b card{#b|>1=s} less per turn."
+      "{@@}Gain X [E] at the start of your turn. Draw X card{X|>1=s} less per turn."
     ]
   },
   "${ModID}:ID_60_Power": {
     "NAME": "Power Punch",
     "DESCRIPTIONS": [
-      "{@@}Punches cost #b [E] less. Draw cards whenever you play a Punch, when upgraded."
+      "{@@}Punches cost X [E] less. Draw cards whenever you play a Punch, when upgraded."
     ]
   },
   "${ModID}:ID_63_Power": {
     "NAME": "Power Punch",
     "DESCRIPTIONS": [
-      "{@@}Punches cost #b [E] less. Draw cards whenever you play a Punch, when upgraded."
+      "{@@}Punches cost X [E] less. Draw cards whenever you play a Punch, when upgraded."
     ]
   },
   "${ModID}:ID_67_Power": {
     "NAME": "Splatter",
     "DESCRIPTIONS": [
-      "If this enemy dies deal #b damage to ALL enemies."
+      "If this enemy dies deal X damage to ALL enemies."
     ]
   },
   "${ModID}:ID_70_Power": {
     "NAME": "Rip off",
     "DESCRIPTIONS": [
-      "When ever you play a Bargain ALL enemies lose #b HP."
+      "When ever you play a Bargain ALL enemies lose X HP."
     ]
   },
   "${ModID}:ID_71_Power": {
     "NAME": "Sacrificial Pawn",
     "DESCRIPTIONS": [
-      "{@@}The next #b card{#b|>1=s} that gets discarded return to your hand."
+      "{@@}The next X card{X|>1=s} that gets discarded return to your hand."
     ]
   },
   "${ModID}:ID_73_Power": {
     "NAME": "Great Deal",
     "DESCRIPTIONS": [
-      "{Whenever a X card is played add #b Bargain into your hand."
+      "{Whenever a X card is played add X Bargain into your hand."
     ]
   },
   "${ModID}:ID_74_Power": {
